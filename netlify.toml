@@ -12,7 +12,14 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
+    X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Allow PDF files to be embedded
+[[headers]]
+  for = "/*.pdf"
+  [headers.values]
+    Content-Disposition = "inline"
+    X-Content-Type-Options = "nosniff"

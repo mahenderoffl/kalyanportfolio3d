@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { StarField, GradientMesh } from "@/components/effects";
@@ -9,7 +9,19 @@ import Icon from "@/components/ui/Icon";
 
 export default function ResumePage() {
   const [isLoading, setIsLoading] = useState(true);
+  const [pdfError, setPdfError] = useState(false);
   const pdfUrl = "/Mahender_Tech_CV.pdf";
+  
+  useEffect(() => {
+    // Set a timeout to handle cases where PDF fails to load
+    const timer = setTimeout(() => {
+      if (isLoading) {
+        setPdfError(true);
+        setIsLoading(false);
+      }
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [isLoading]);
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -74,7 +86,7 @@ export default function ResumePage() {
             className="relative rounded-2xl overflow-hidden border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-xl shadow-2xl"
           >
             {/* Loading State */}
-            {isLoading && (
+            {isLoading && !pdfError && (
               <div className="absolute inset-0 flex items-center justify-center bg-[var(--bg-secondary)]">
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-10 h-10 border-3 border-[var(--accent-purple)] border-t-transparent rounded-full animate-spin" />
@@ -85,14 +97,62 @@ export default function ResumePage() {
               </div>
             )}
 
-            {/* PDF Embed */}
-            <iframe
-              src={`${pdfUrl}#toolbar=1&navpanes=0&scrollbar=1`}
-              className="w-full bg-white"
-              style={{ height: "calc(100vh - 180px)", minHeight: "400px" }}
-              onLoad={() => setIsLoading(false)}
-              title="Mahender Banoth Resume"
-            />
+            {/* PDF Error/Fallback State */}
+            {pdfError ? (
+              <div className="flex flex-col items-center justify-center py-20 px-4" style={{ minHeight: "calc(100vh - 180px)" }}>
+                <div className="w-16 h-16 mb-6 rounded-full bg-[var(--bg-tertiary)] flex items-center justify-center">
+                  <Icon name="file" size={32} className="text-[var(--accent-purple)]" />
+                </div>
+                <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">
+                  PDF Preview Unavailable
+                </h3>
+                <p className="text-[var(--text-tertiary)] text-center max-w-md mb-6">
+                  Your browser doesn&apos;t support inline PDF viewing. Please download the resume to view it.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <motion.button
+                    onClick={handleDownload}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-pink)] text-white font-medium shadow-lg"
+                  >
+                    <Icon name="file" size={18} />
+                    <span>Download PDF</span>
+                  </motion.button>
+                  <a
+                    href={pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--bg-tertiary)] text-[var(--text-primary)] font-medium hover:bg-[var(--bg-secondary)] transition-colors"
+                  >
+                    <Icon name="globe" size={18} />
+                    <span>Open in New Tab</span>
+                  </a>
+                </div>
+              </div>
+            ) : (
+              /* PDF Embed using object tag for better compatibility */
+              <object
+                data={pdfUrl}
+                type="application/pdf"
+                className="w-full bg-white"
+                style={{ height: "calc(100vh - 180px)", minHeight: "400px" }}
+                onLoad={() => setIsLoading(false)}
+                onError={() => {
+                  setPdfError(true);
+                  setIsLoading(false);
+                }}
+              >
+                {/* Fallback for browsers that don't support object tag */}
+                <embed
+                  src={pdfUrl}
+                  type="application/pdf"
+                  className="w-full bg-white"
+                  style={{ height: "calc(100vh - 180px)", minHeight: "400px" }}
+                  onLoad={() => setIsLoading(false)}
+                />
+              </object>
+            )}
           </motion.div>
 
           {/* Mobile Download CTA */}

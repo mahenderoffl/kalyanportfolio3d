@@ -6,7 +6,7 @@
   "installCommand": "npm install",
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/((?!.*\\.pdf$).*)",
       "headers": [
         {
           "key": "X-Content-Type-Options",
@@ -14,7 +14,7 @@
         },
         {
           "key": "X-Frame-Options",
-          "value": "DENY"
+          "value": "SAMEORIGIN"
         },
         {
           "key": "X-XSS-Protection",
@@ -23,6 +23,19 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.pdf)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "inline"
         }
       ]
     },
@@ -43,12 +56,6 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/resume",
-      "destination": "/api/download-resume"
     }
   ]
 }
