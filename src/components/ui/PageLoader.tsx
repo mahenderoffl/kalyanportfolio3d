@@ -6,32 +6,32 @@ import Image from "next/image";
 export default function PageLoader() {
   const [isLoading, setIsLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
-  const [animationPhase, setAnimationPhase] = useState(0);
+  const [phase, setPhase] = useState(0);
 
   useEffect(() => {
-    // Phase 1: Show IIT Patna logo
-    const phase1 = setTimeout(() => setAnimationPhase(1), 300);
+    // Phase 1: IIT Patna logo
+    const p1 = setTimeout(() => setPhase(1), 200);
     
-    // Phase 2: Show Waveseed logo
-    const phase2 = setTimeout(() => setAnimationPhase(2), 1200);
+    // Phase 2: Waveseed logo (morphs from IIT Patna)
+    const p2 = setTimeout(() => setPhase(2), 1000);
     
-    // Phase 3: Merge animation
-    const phase3 = setTimeout(() => setAnimationPhase(3), 2100);
+    // Phase 3: Profile image (morphs from Waveseed)
+    const p3 = setTimeout(() => setPhase(3), 1800);
+    
+    // Phase 4: BOOM - Final reveal with explosion effect
+    const p4 = setTimeout(() => setPhase(4), 2600);
 
     // Start fade out
-    const fadeTimer = setTimeout(() => {
-      setFadeOut(true);
-    }, 3000);
+    const fadeTimer = setTimeout(() => setFadeOut(true), 3400);
 
     // Remove from DOM
-    const removeTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3500);
+    const removeTimer = setTimeout(() => setIsLoading(false), 3900);
 
     return () => {
-      clearTimeout(phase1);
-      clearTimeout(phase2);
-      clearTimeout(phase3);
+      clearTimeout(p1);
+      clearTimeout(p2);
+      clearTimeout(p3);
+      clearTimeout(p4);
       clearTimeout(fadeTimer);
       clearTimeout(removeTimer);
     };
@@ -45,67 +45,52 @@ export default function PageLoader() {
         fadeOut ? "opacity-0" : "opacity-100"
       }`}
     >
-      {/* Animated background gradient */}
+      {/* Animated background - intensifies with phases */}
       <div className="absolute inset-0 overflow-hidden">
         <div 
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 transition-opacity duration-500"
           style={{
-            background: `radial-gradient(circle at 30% 40%, var(--accent-purple) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 60%, var(--accent-pink) 0%, transparent 50%)`,
-            animation: "pulse 3s ease-in-out infinite",
+            opacity: phase >= 4 ? 0.5 : 0.2,
+            background: `radial-gradient(circle at 50% 50%, var(--accent-purple) 0%, transparent 50%),
+                        radial-gradient(circle at 50% 50%, var(--accent-pink) 0%, transparent 60%)`,
           }}
         />
       </div>
 
-      <div className="relative flex flex-col items-center">
-        {/* Profile Image - appears first */}
-        <div
-          className={`relative mb-6 transition-all duration-700 ease-out ${
-            animationPhase >= 1 ? "opacity-100 scale-100" : "opacity-0 scale-75"
-          }`}
-        >
-          <div className="relative w-[100px] h-[100px] rounded-full overflow-hidden border-3 border-[var(--accent-purple)]/50">
-            <Image
-              src="/mahender-banoth.png"
-              alt="Mahender Banoth"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-          {/* Animated ring around profile */}
-          <div 
-            className={`absolute -inset-1 rounded-full border-2 border-transparent ${
-              animationPhase >= 1 ? "animate-spin" : ""
-            }`}
-            style={{ 
-              animationDuration: "3s",
-              background: "linear-gradient(90deg, var(--accent-purple), var(--accent-pink), var(--accent-cyan), var(--accent-purple))",
-              backgroundSize: "300% 100%",
-              WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-              WebkitMaskComposite: "xor",
-              maskComposite: "exclude",
-              padding: "2px",
-              animation: animationPhase >= 1 ? "spin 3s linear infinite, gradient-shift 2s ease infinite" : "none",
-            }}
-          />
-        </div>
+      {/* Explosion rings on BOOM */}
+      {phase >= 4 && (
+        <>
+          <div className="absolute w-32 h-32 rounded-full border-2 border-[var(--accent-purple)]/60 animate-explosion-ring" />
+          <div className="absolute w-32 h-32 rounded-full border-2 border-[var(--accent-pink)]/60 animate-explosion-ring-delayed" />
+          <div className="absolute w-32 h-32 rounded-full border-2 border-[var(--accent-cyan)]/60 animate-explosion-ring-delayed-2" />
+        </>
+      )}
 
-        {/* Logo Container */}
-        <div className="relative h-[80px] flex items-center justify-center">
+      <div className="relative flex flex-col items-center">
+        {/* Central morphing container */}
+        <div className="relative w-[120px] h-[120px] flex items-center justify-center">
           
-          {/* IIT Patna Logo */}
-          <div
-            className={`absolute transition-all duration-700 ease-out ${
-              animationPhase >= 1 ? "opacity-100 scale-100" : "opacity-0 scale-50"
-            } ${
-              animationPhase >= 3 ? "-translate-x-12 scale-90" : "translate-x-0"
-            }`}
+          {/* Rotating gradient ring - always visible after phase 1 */}
+          <div 
+            className={`absolute inset-0 rounded-full transition-all duration-500 ${
+              phase >= 1 ? "opacity-100" : "opacity-0"
+            } ${phase >= 4 ? "scale-125" : "scale-100"}`}
             style={{
-              filter: animationPhase >= 1 ? "drop-shadow(0 0 15px rgba(139, 92, 246, 0.4))" : "none",
+              background: "conic-gradient(from 0deg, var(--accent-purple), var(--accent-pink), var(--accent-cyan), var(--accent-purple))",
+              padding: "3px",
+              animation: phase >= 1 ? "spin 2s linear infinite" : "none",
             }}
           >
-            <div className="relative w-[60px] h-[60px]">
+            <div className="w-full h-full rounded-full bg-[var(--bg-primary)]" />
+          </div>
+
+          {/* Phase 1: IIT Patna Logo */}
+          <div
+            className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${
+              phase === 1 ? "opacity-100 scale-100" : phase < 1 ? "opacity-0 scale-50" : "opacity-0 scale-150"
+            }`}
+          >
+            <div className="relative w-[70px] h-[70px]">
               <Image
                 src="/iitp-logo.png"
                 alt="IIT Patna"
@@ -113,28 +98,16 @@ export default function PageLoader() {
                 className="object-contain"
                 priority
               />
-              {/* Glow ring animation */}
-              <div 
-                className={`absolute inset-0 rounded-full border-2 border-[var(--accent-purple)]/50 ${
-                  animationPhase >= 1 && animationPhase < 3 ? "animate-ping" : "opacity-0"
-                }`}
-                style={{ animationDuration: "1.5s" }}
-              />
             </div>
           </div>
 
-          {/* Waveseed Logo */}
+          {/* Phase 2: Waveseed Logo */}
           <div
-            className={`absolute transition-all duration-700 ease-out ${
-              animationPhase >= 2 ? "opacity-100 scale-100" : "opacity-0 scale-50"
-            } ${
-              animationPhase >= 3 ? "translate-x-12 scale-90" : "translate-x-0"
+            className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${
+              phase === 2 ? "opacity-100 scale-100" : phase < 2 ? "opacity-0 scale-50" : "opacity-0 scale-150"
             }`}
-            style={{
-              filter: animationPhase >= 2 ? "drop-shadow(0 0 15px rgba(236, 72, 153, 0.4))" : "none",
-            }}
           >
-            <div className="relative w-[60px] h-[60px]">
+            <div className="relative w-[70px] h-[70px]">
               <Image
                 src="/waveseed-logo-white.png"
                 alt="Waveseed"
@@ -142,34 +115,45 @@ export default function PageLoader() {
                 className="object-contain"
                 priority
               />
-              {/* Glow ring animation */}
-              <div 
-                className={`absolute inset-0 rounded-full border-2 border-[var(--accent-pink)]/50 ${
-                  animationPhase >= 2 && animationPhase < 3 ? "animate-ping" : "opacity-0"
-                }`}
-                style={{ animationDuration: "1.5s" }}
+            </div>
+          </div>
+
+          {/* Phase 3 & 4: Profile Image */}
+          <div
+            className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${
+              phase >= 3 ? "opacity-100" : "opacity-0 scale-50"
+            } ${phase >= 4 ? "scale-110" : "scale-100"}`}
+          >
+            <div className="relative w-[100px] h-[100px] rounded-full overflow-hidden">
+              <Image
+                src="/mahender-pic.png"
+                alt="Mahender Banoth"
+                fill
+                className="object-cover"
+                priority
               />
             </div>
           </div>
 
-          {/* Center connector line when merged */}
-          <div
-            className={`absolute w-20 h-0.5 bg-gradient-to-r from-[var(--accent-purple)] via-[var(--accent-cyan)] to-[var(--accent-pink)] transition-all duration-500 ${
-              animationPhase >= 3 ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
+          {/* Glow pulse effect */}
+          <div 
+            className={`absolute inset-0 rounded-full transition-all duration-300 ${
+              phase >= 4 ? "animate-glow-pulse" : ""
             }`}
+            style={{
+              boxShadow: phase >= 4 
+                ? "0 0 60px 20px rgba(139, 92, 246, 0.4), 0 0 100px 40px rgba(236, 72, 153, 0.2)"
+                : "none",
+            }}
           />
         </div>
 
-        {/* Text animations */}
-        <div className="mt-8 flex flex-col items-center gap-2 overflow-hidden">
+        {/* Text labels - morph with logos */}
+        <div className="mt-8 h-16 flex flex-col items-center justify-center overflow-hidden">
           {/* IIT Patna text */}
           <span
-            className={`text-sm font-medium text-[var(--text-tertiary)] transition-all duration-500 ${
-              animationPhase >= 1 && animationPhase < 3
-                ? "opacity-100 translate-y-0"
-                : animationPhase >= 3
-                ? "opacity-0 -translate-y-4 absolute"
-                : "opacity-0 translate-y-4"
+            className={`text-base font-medium text-[var(--text-secondary)] transition-all duration-400 absolute ${
+              phase === 1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             IIT Patna
@@ -177,87 +161,168 @@ export default function PageLoader() {
 
           {/* Waveseed text */}
           <span
-            className={`text-sm font-medium text-[var(--text-tertiary)] transition-all duration-500 ${
-              animationPhase >= 2 && animationPhase < 3
-                ? "opacity-100 translate-y-0"
-                : animationPhase >= 3
-                ? "opacity-0 -translate-y-4 absolute"
-                : "opacity-0 translate-y-4"
+            className={`text-base font-medium text-[var(--text-secondary)] transition-all duration-400 absolute ${
+              phase === 2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             Waveseed Co.
           </span>
 
-          {/* Final merged text */}
-          <div
-            className={`flex flex-col items-center transition-all duration-700 ${
-              animationPhase >= 3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          {/* Preparing text */}
+          <span
+            className={`text-base font-medium text-[var(--text-secondary)] transition-all duration-400 absolute ${
+              phase === 3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="text-lg font-accent font-bold gradient-text">
+            Get Ready...
+          </span>
+
+          {/* BOOM - Final reveal */}
+          <div
+            className={`flex flex-col items-center transition-all duration-500 ${
+              phase >= 4 ? "opacity-100 scale-100" : "opacity-0 scale-75"
+            }`}
+          >
+            <span className="text-2xl font-accent font-bold gradient-text animate-text-glow">
               Mahender Banoth
             </span>
-            <span className="text-xs text-[var(--text-tertiary)] mt-1">
+            <span className="text-sm text-[var(--text-tertiary)] mt-2 flex items-center gap-2">
+              <span className="w-8 h-px bg-gradient-to-r from-transparent via-[var(--accent-purple)] to-transparent" />
               IIT Patna × Waveseed
+              <span className="w-8 h-px bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent" />
             </span>
           </div>
         </div>
 
-        {/* Progress bar */}
-        <div className="mt-8 w-48 h-1 bg-[var(--bg-tertiary)] rounded-full overflow-hidden">
-          <div
-            className="h-full bg-gradient-to-r from-[var(--accent-purple)] via-[var(--accent-cyan)] to-[var(--accent-pink)] rounded-full transition-all duration-500 ease-out"
-            style={{
-              width: animationPhase === 0 ? "0%" : 
-                     animationPhase === 1 ? "33%" : 
-                     animationPhase === 2 ? "66%" : "100%",
-            }}
-          />
+        {/* Progress dots */}
+        <div className="mt-8 flex items-center gap-3">
+          {[1, 2, 3, 4].map((dot) => (
+            <div
+              key={dot}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                phase >= dot 
+                  ? "bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-pink)] scale-100" 
+                  : "bg-[var(--bg-tertiary)] scale-75"
+              } ${phase === dot ? "animate-pulse scale-125" : ""}`}
+            />
+          ))}
         </div>
       </div>
 
-      {/* Floating particles */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 rounded-full bg-[var(--accent-purple)]/30"
-            style={{
-              left: `${15 + i * 15}%`,
-              top: `${20 + (i % 3) * 25}%`,
-              animation: `float ${3 + i * 0.5}s ease-in-out infinite`,
-              animationDelay: `${i * 0.3}s`,
-            }}
-          />
-        ))}
-      </div>
+      {/* Particle burst on BOOM */}
+      {phase >= 4 && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute left-1/2 top-1/2 w-2 h-2 rounded-full"
+              style={{
+                background: i % 3 === 0 
+                  ? "var(--accent-purple)" 
+                  : i % 3 === 1 
+                  ? "var(--accent-pink)" 
+                  : "var(--accent-cyan)",
+                animation: `particle-burst 0.8s ease-out forwards`,
+                animationDelay: `${i * 0.02}s`,
+                transform: `rotate(${i * 30}deg) translateY(-20px)`,
+              }}
+            />
+          ))}
+        </div>
+      )}
 
       <style jsx>{`
-        @keyframes float {
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        
+        @keyframes explosion-ring {
+          0% {
+            transform: scale(1);
+            opacity: 0.8;
+          }
+          100% {
+            transform: scale(4);
+            opacity: 0;
+          }
+        }
+        
+        @keyframes explosion-ring-delayed {
+          0% {
+            transform: scale(1);
+            opacity: 0;
+          }
+          10% {
+            opacity: 0.6;
+          }
+          100% {
+            transform: scale(5);
+            opacity: 0;
+          }
+        }
+        
+        @keyframes explosion-ring-delayed-2 {
+          0% {
+            transform: scale(1);
+            opacity: 0;
+          }
+          20% {
+            opacity: 0.4;
+          }
+          100% {
+            transform: scale(6);
+            opacity: 0;
+          }
+        }
+        
+        @keyframes particle-burst {
+          0% {
+            transform: rotate(var(--rotation)) translateY(0) scale(1);
+            opacity: 1;
+          }
+          100% {
+            transform: rotate(var(--rotation)) translateY(-150px) scale(0);
+            opacity: 0;
+          }
+        }
+        
+        @keyframes glow-pulse {
           0%, 100% {
-            transform: translateY(0) scale(1);
-            opacity: 0.3;
+            opacity: 1;
           }
           50% {
-            transform: translateY(-20px) scale(1.2);
             opacity: 0.6;
           }
         }
-        @keyframes gradient-shift {
+        
+        @keyframes text-glow {
           0%, 100% {
-            background-position: 0% 50%;
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.5), 0 0 40px rgba(236, 72, 153, 0.3);
           }
           50% {
-            background-position: 100% 50%;
+            text-shadow: 0 0 30px rgba(139, 92, 246, 0.8), 0 0 60px rgba(236, 72, 153, 0.5);
           }
         }
-        @keyframes spin {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
+        
+        .animate-explosion-ring {
+          animation: explosion-ring 0.8s ease-out forwards;
+        }
+        
+        .animate-explosion-ring-delayed {
+          animation: explosion-ring-delayed 0.9s ease-out forwards;
+        }
+        
+        .animate-explosion-ring-delayed-2 {
+          animation: explosion-ring-delayed-2 1s ease-out forwards;
+        }
+        
+        .animate-glow-pulse {
+          animation: glow-pulse 1s ease-in-out infinite;
+        }
+        
+        .animate-text-glow {
+          animation: text-glow 1.5s ease-in-out infinite;
         }
       `}</style>
     </div>
