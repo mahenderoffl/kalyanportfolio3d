@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mahender Banoth - 3D Cinematic Portfolio 🚀
 
-## Getting Started
+A jaw-dropping, next-gen portfolio website built with cutting-edge web technologies. This portfolio showcases Mahender Banoth's journey as a Tech Entrepreneur, Product Architect, and Data Scientist.
 
-First, run the development server:
+## ✨ Features
+
+### 🎨 Design & UX
+- **Cinematic Dark Theme**: Deep space aesthetic with cosmic gradients
+- **Glass Morphism UI**: Frosted glass cards with depth effects
+- **Smooth Animations**: Powered by Framer Motion
+- **Custom Cursor**: Desktop-only interactive cursor
+- **Responsive Design**: Seamless experience across all devices
+
+### 🧩 Sections
+1. **Hero Section**: Animated text reveal with rotating taglines
+2. **Identity Cards**: 4-panel showcase (Founder, Architect, Data Scientist, Student)
+3. **Tech Universe**: 60+ technologies in orbital ring visualization
+4. **Projects Galaxy**: 10+ projects with expandable cards
+5. **Journey Timeline**: Interactive career timeline with filters
+6. **Contact Section**: Form + social links + booking CTA
+
+### 🛠️ Technical Stack
+- **Next.js 16**: Latest App Router with Turbopack
+- **TypeScript**: Full type safety
+- **Tailwind CSS v4**: Modern utility-first styling
+- **Framer Motion**: Production-grade animations
+
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/           # Next.js App Router pages
+├── components/    # React components
+│   ├── effects/   # Background effects
+│   ├── sections/  # Page sections
+│   └── ui/        # Reusable UI
+├── data/          # Static data files
+└── hooks/         # Custom hooks
+```
 
-## Learn More
+## 🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+Deploy to Vercel with one click or use the CLI:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+Built with ♥ by Mahender Banoth
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/mahenderbanoth)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/mahender-banoth)
