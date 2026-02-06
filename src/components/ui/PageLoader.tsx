@@ -58,21 +58,54 @@ export default function PageLoader() {
       </div>
 
       <div className="relative flex flex-col items-center">
+        {/* Profile Image - appears first */}
+        <div
+          className={`relative mb-6 transition-all duration-700 ease-out ${
+            animationPhase >= 1 ? "opacity-100 scale-100" : "opacity-0 scale-75"
+          }`}
+        >
+          <div className="relative w-[100px] h-[100px] rounded-full overflow-hidden border-3 border-[var(--accent-purple)]/50">
+            <Image
+              src="/mahender-banoth.png"
+              alt="Mahender Banoth"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          {/* Animated ring around profile */}
+          <div 
+            className={`absolute -inset-1 rounded-full border-2 border-transparent ${
+              animationPhase >= 1 ? "animate-spin" : ""
+            }`}
+            style={{ 
+              animationDuration: "3s",
+              background: "linear-gradient(90deg, var(--accent-purple), var(--accent-pink), var(--accent-cyan), var(--accent-purple))",
+              backgroundSize: "300% 100%",
+              WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+              WebkitMaskComposite: "xor",
+              maskComposite: "exclude",
+              padding: "2px",
+              animation: animationPhase >= 1 ? "spin 3s linear infinite, gradient-shift 2s ease infinite" : "none",
+            }}
+          />
+        </div>
+
         {/* Logo Container */}
-        <div className="relative h-[140px] flex items-center justify-center">
+        <div className="relative h-[80px] flex items-center justify-center">
           
           {/* IIT Patna Logo */}
           <div
             className={`absolute transition-all duration-700 ease-out ${
               animationPhase >= 1 ? "opacity-100 scale-100" : "opacity-0 scale-50"
             } ${
-              animationPhase >= 3 ? "-translate-x-16 scale-75" : "translate-x-0"
+              animationPhase >= 3 ? "-translate-x-12 scale-90" : "translate-x-0"
             }`}
             style={{
-              filter: animationPhase >= 1 ? "drop-shadow(0 0 20px rgba(139, 92, 246, 0.5))" : "none",
+              filter: animationPhase >= 1 ? "drop-shadow(0 0 15px rgba(139, 92, 246, 0.4))" : "none",
             }}
           >
-            <div className="relative w-[80px] h-[80px]">
+            <div className="relative w-[60px] h-[60px]">
               <Image
                 src="/iitp-logo.png"
                 alt="IIT Patna"
@@ -95,13 +128,13 @@ export default function PageLoader() {
             className={`absolute transition-all duration-700 ease-out ${
               animationPhase >= 2 ? "opacity-100 scale-100" : "opacity-0 scale-50"
             } ${
-              animationPhase >= 3 ? "translate-x-16 scale-75" : "translate-x-0"
+              animationPhase >= 3 ? "translate-x-12 scale-90" : "translate-x-0"
             }`}
             style={{
-              filter: animationPhase >= 2 ? "drop-shadow(0 0 20px rgba(236, 72, 153, 0.5))" : "none",
+              filter: animationPhase >= 2 ? "drop-shadow(0 0 15px rgba(236, 72, 153, 0.4))" : "none",
             }}
           >
-            <div className="relative w-[80px] h-[80px]">
+            <div className="relative w-[60px] h-[60px]">
               <Image
                 src="/waveseed-logo-white.png"
                 alt="Waveseed"
@@ -121,7 +154,7 @@ export default function PageLoader() {
 
           {/* Center connector line when merged */}
           <div
-            className={`absolute w-24 h-0.5 bg-gradient-to-r from-[var(--accent-purple)] via-[var(--accent-cyan)] to-[var(--accent-pink)] transition-all duration-500 ${
+            className={`absolute w-20 h-0.5 bg-gradient-to-r from-[var(--accent-purple)] via-[var(--accent-cyan)] to-[var(--accent-pink)] transition-all duration-500 ${
               animationPhase >= 3 ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
             }`}
           />
@@ -208,6 +241,22 @@ export default function PageLoader() {
           50% {
             transform: translateY(-20px) scale(1.2);
             opacity: 0.6;
+          }
+        }
+        @keyframes gradient-shift {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
           }
         }
       `}</style>
