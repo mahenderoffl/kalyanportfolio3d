@@ -137,7 +137,7 @@ export default function TechUniverse() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, cubicBezier: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto max-w-6xl"
         >
           {/* Section Header */}
