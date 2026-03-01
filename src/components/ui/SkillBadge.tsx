@@ -12,8 +12,8 @@ interface SkillBadgeProps {
 
 const levelColors = {
   beginner: "from-gray-400 to-gray-500",
-  intermediate: "from-blue-400 to-blue-500",
-  advanced: "from-purple-400 to-purple-500",
+  intermediate: "from-red-400 to-red-500",
+  advanced: "from-red-400 to-red-500",
   expert: "from-yellow-400 to-orange-500",
 };
 
@@ -113,3 +113,5 @@ export function FloatingSkills({ skills }: { skills: string[] }) {
     </div>
   );
 }
+
+

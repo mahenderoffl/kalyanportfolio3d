@@ -16,7 +16,7 @@ const caseStudies = [
       { label: "Features Shipped", value: "15+" },
     ],
     gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-    accentColor: "var(--accent-pink)",
+    accentColor: "var(--accent-orange)",
   },
   {
     id: "wavebase-builder",
@@ -28,7 +28,7 @@ const caseStudies = [
       { label: "Accuracy", value: "95%" },
     ],
     gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    accentColor: "var(--accent-purple)",
+    accentColor: "var(--accent-red)",
   },
   {
     id: "campusbuzz-platform",
@@ -121,7 +121,7 @@ export default function CaseStudiesPreview() {
                   {study.metrics.map((metric) => (
                     <div
                       key={metric.label}
-                      className="p-2 sm:p-3 rounded-lg bg-[var(--bg-tertiary)] border border-[var(--glass-border)]"
+                      className="p-2 sm:p-3 rounded-lg bg-black/40 backdrop-blur-md border border-[var(--glass-border)]"
                     >
                       <div
                         className="text-base sm:text-lg font-bold"
@@ -173,3 +173,10 @@ export default function CaseStudiesPreview() {
     </section>
   );
 }
+
+
+
+
+
+
+

@@ -25,7 +25,7 @@ const GlassCard = memo(function GlassCard({
         rounded-2xl shadow-[var(--glass-shadow)]
         transition-all duration-300 ease-out
         hover:bg-[var(--glass-bg-hover)] hover:border-[var(--glass-border-hover)]
-        ${glowOnHover ? 'hover:shadow-[0_0_20px_rgba(139,92,246,0.3),0_0_40px_rgba(139,92,246,0.1)] hover:border-[var(--accent-purple)]/40' : ''}
+        ${glowOnHover ? 'hover:shadow-[0_0_20px_rgba(139,92,246,0.3),0_0_40px_rgba(139,92,246,0.1)] hover:border-[var(--accent-red)]/40' : ''}
         group/card
         ${className}
       `}
@@ -44,8 +44,8 @@ const GlassCard = memo(function GlassCard({
       {/* Corner glow accents */}
       {glowOnHover && (
         <>
-          <div className="absolute -top-1 -left-1 w-16 h-16 bg-[var(--accent-purple)]/0 group-hover/card:bg-[var(--accent-purple)]/20 rounded-full blur-xl transition-all duration-500 pointer-events-none" />
-          <div className="absolute -bottom-1 -right-1 w-16 h-16 bg-[var(--accent-cyan)]/0 group-hover/card:bg-[var(--accent-cyan)]/20 rounded-full blur-xl transition-all duration-500 pointer-events-none" />
+          <div className="absolute -top-1 -left-1 w-16 h-16 bg-[var(--accent-red)]/0 group-hover/card:bg-[var(--accent-red)]/20 rounded-full blur-xl transition-all duration-500 pointer-events-none" />
+          <div className="absolute -bottom-1 -right-1 w-16 h-16 bg-[var(--accent-orange)]/0 group-hover/card:bg-[var(--accent-orange)]/20 rounded-full blur-xl transition-all duration-500 pointer-events-none" />
         </>
       )}
       
@@ -56,3 +56,8 @@ const GlassCard = memo(function GlassCard({
 });
 
 export default GlassCard;
+
+
+
+
+

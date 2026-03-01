@@ -20,88 +20,90 @@ interface IdentityCard {
 
 const identityCards: IdentityCard[] = [
   {
-    id: "founder",
-    icon: "rocket",
-    title: "FOUNDER & CEO",
-    subtitle: "WaveSeed Co.",
-    description: "Building AI systems that automate complexity away",
+    id: "ai-developer",
+    icon: "cpu",
+    title: "SOFTWARE ENGINEER (AI DEVELOPER)",
+    subtitle: "Xenspire Group",
+    description: "Building end-to-end SaaS platforms with AI-powered automation",
     highlights: [
-      "WaveSeed Growth (AI Marketing Agency)",
-      "WaveBase (AI Website Builder)",
-      "WaveSignals (AI Blog Automation)",
-      "LifeWeeks (Productivity Tracker)",
-      "Business Automation (10K+ daily events)",
+      "Email & SMS Automation Systems",
+      "Campaign Management Platform",
+      "Job Posting Extraction (Brightdata)",
+      "Contact Sourcing (Apollo, ByteMine)",
+      "LinkedIn Candidate Search",
+      "AI Agents for Automation",
     ],
     stats: [
-      { label: "Manual Work Reduction", value: "85%" },
-      { label: "AI Response Time", value: "200ms" },
-      { label: "Products Launched", value: "5+" },
+      { label: "Platform Type", value: "SaaS" },
+      { label: "Dev Approach", value: "Solo" },
+      { label: "Stack", value: "React+FastAPI" },
     ],
-    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    gradient: "linear-gradient(135deg, #8B5CF6 0%, #D946EF 100%)",
     glowColor: "rgba(139, 92, 246, 0.4)",
   },
   {
-    id: "architect",
+    id: "fullstack",
     icon: "code",
-    title: "BUILDER & CHIEF DEVELOPER",
-    subtitle: "Full-Stack AI Development @ WaveSeed Co.",
-    description: "Building scalable, intelligent systems",
+    title: "FULL-STACK AI DEVELOPER",
+    subtitle: "50+ AI Agents • React • FastAPI • LangChain",
+    description: "Building intelligent systems from frontend to deployment",
     highlights: [
-      "Multi-agent orchestration (LangChain, CrewAI)",
-      "Vector databases & RAG pipelines",
-      "Kubernetes + AWS/GCP infrastructure",
-      "Real-time processing (10K+ events/day)",
-      "MLOps & DevOps pipelines",
+      "50+ AI Agents (GPT-4, Claude, Llama3, Gemini)",
+      "Advanced RAG Pipelines & Vector DBs",
+      "ReAct-style & Agentic Architecture",
+      "React, Next.js, NestJS, FastAPI",
+      "n8n Automation Workflows",
     ],
     stats: [
-      { label: "Technologies", value: "150+" },
-      { label: "Daily Events", value: "10K+" },
-      { label: "Uptime", value: "99.9%" },
+      { label: "AI Agents", value: "50+" },
+      { label: "LLMs Used", value: "8+" },
+      { label: "Frameworks", value: "10+" },
     ],
     gradient: "linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)",
     glowColor: "rgba(59, 130, 246, 0.4)",
   },
   {
-    id: "data-scientist",
-    icon: "chart",
-    title: "DATA SCIENCE & ANALYTICS",
-    subtitle: "Turning data into insights",
-    description: "ML models, BI dashboards, predictive analytics",
+    id: "founder",
+    icon: "rocket",
+    title: "FOUNDER & ENTREPRENEUR",
+    subtitle: "WaveSeed • CampusBuzz • Olive Orange",
+    description: "Building products that impact businesses and student communities",
     highlights: [
-      "Predictive Analytics & ML (scikit-learn)",
-      "BI Dashboards (Power BI, Tableau)",
-      "Statistical Analysis & Hypothesis Testing",
-      "Python (Pandas, NumPy, Matplotlib)",
-      "A/B Testing & Conversion Analytics",
+      "WaveSeed: Modern digital products & AI scaling",
+      "CampusBuzz: 550+ downloads, Top 100 Startup",
+      "Recognized by Inflection Point Ventures",
+      "Acknowledged by E-Cell IIT KGP",
+      "Olive Orange: AI-Powered EdTech",
+      "Led 30+ interns across dev & design",
     ],
     stats: [
-      { label: "Prediction Accuracy", value: "85%" },
-      { label: "Dashboards Built", value: "8+" },
-      { label: "Records Analyzed", value: "500K+" },
+      { label: "Startups", value: "3" },
+      { label: "Downloads", value: "550+" },
+      { label: "Interns Led", value: "30+" },
     ],
-    gradient: "linear-gradient(135deg, #10b981 0%, #06b6d4 100%)",
-    glowColor: "rgba(16, 185, 129, 0.4)",
+    gradient: "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
+    glowColor: "rgba(249, 115, 22, 0.4)",
   },
   {
     id: "student",
     icon: "graduation",
-    title: "GRADUATE @ IIT PATNA",
-    subtitle: "Indian Institute of Technology Patna",
-    description: "Academic excellence with practical impact",
+    title: "M.TECH @ IIT KHARAGPUR",
+    subtitle: "Indian Institute of Technology Kharagpur",
+    description: "Department Topper • Best Performance in Technology Award",
     highlights: [
-      "CGPA: 8.18/10.0",
-      "Tata Foundation Scholar (2023-2026)",
-      "Internship & Placement Coordinator",
-      "Co-founded CampusBuzz (5K+ students)",
-      "Coordinated 15+ placement drives",
+      "CGPA: 8.84/10.0 — Department Topper",
+      "Best Performance in Technology Award (2024-25)",
+      "AI Research Intern at ISRO NRSC",
+      "Led events at MMM Hall (2100+ students)",
+      "Gold Medal - JNTU Football Tournament",
     ],
     stats: [
-      { label: "CGPA", value: "8.18" },
-      { label: "Students Impacted", value: "5K+" },
-      { label: "Placement Success", value: "+25%" },
+      { label: "CGPA", value: "8.84" },
+      { label: "Students Led", value: "2100+" },
+      { label: "Award", value: "Best Tech" },
     ],
-    gradient: "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
-    glowColor: "rgba(249, 115, 22, 0.4)",
+    gradient: "linear-gradient(135deg, #10b981 0%, #06b6d4 100%)",
+    glowColor: "rgba(16, 185, 129, 0.4)",
   },
 ];
 
@@ -115,7 +117,7 @@ const cardVariants: Variants = {
     y: 0,
     transition: {
       duration: 0.4,
-      delay: index * 0.1, // Faster stagger
+      delay: index * 0.1,
       ease: "easeOut",
     },
   }),
@@ -135,25 +137,12 @@ export default function IdentityCards() {
     offset: ["start end", "end start"],
   });
 
-  // Removed parallax transforms for better performance
-
   return (
     <section
       ref={sectionRef}
       id="identity"
       className="relative py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden"
     >
-      {/* IIT Patna Background Image */}
-      <div 
-        className="absolute inset-0 -z-10 opacity-10"
-        style={{
-          backgroundImage: 'url(/iitp-logo.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[var(--bg-primary)] via-transparent to-[var(--bg-primary)]" />
       {/* Section Header */}
       <div className="container-max mb-10 sm:mb-12 md:mb-16 px-4 sm:px-6">
         <motion.div
@@ -162,7 +151,7 @@ export default function IdentityCards() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs sm:text-sm font-medium text-[var(--accent-purple)] bg-[var(--accent-purple)]/10 rounded-full border border-[var(--accent-purple)]/20">
+          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs sm:text-sm font-medium text-[var(--accent-red)] bg-[var(--accent-red)]/10 rounded-full border border-[var(--accent-red)]/20">
             Who I Am
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-display font-accent font-bold mb-3 sm:mb-4">
@@ -170,7 +159,7 @@ export default function IdentityCards() {
             <span className="text-[var(--text-primary)]">One Vision</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-body-lg text-[var(--text-tertiary)] max-w-2xl mx-auto px-2">
-            Founder, developer, data scientist, and student — building the future
+            AI Developer, Full-Stack Engineer, Founder, and IIT KGP Topper — building the future
             of intelligent automation.
           </p>
         </motion.div>
@@ -273,61 +262,18 @@ export default function IdentityCards() {
             </motion.div>
           ))}
         </div>
-
-        {/* WaveSeed Launch Video */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-10 sm:mt-12 md:mt-16"
-        >
-          <GlassCard className="p-6 sm:p-8">
-            <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center">
-              {/* Video */}
-              <div className="w-full lg:w-2/3">
-                <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-[var(--glass-border)] shadow-[0_0_40px_rgba(139,92,246,0.2)]">
-                  <iframe
-                    src="https://www.youtube.com/embed/iY6jOSFuCyI?rel=0&modestbranding=1"
-                    title="WaveSeed Launch Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                </div>
-              </div>
-              {/* Info */}
-              <div className="w-full lg:w-1/3 text-center lg:text-left">
-                <span className="inline-block px-3 py-1 mb-4 text-xs font-medium text-[var(--accent-pink)] bg-[var(--accent-pink)]/10 rounded-full border border-[var(--accent-pink)]/20">
-                  🚀 Watch the Launch
-                </span>
-                <h3 className="text-xl sm:text-2xl font-bold gradient-text mb-3">
-                  WaveSeed Co. Launch
-                </h3>
-                <p className="text-sm text-[var(--text-tertiary)] mb-4">
-                  Watch how we&apos;re building the future of AI-powered business automation. From concept to product, see the vision behind WaveSeed.
-                </p>
-                <a
-                  href="https://waveseed.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-[var(--accent-purple)] hover:gap-3 transition-all"
-                >
-                  Visit waveseed.app
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </GlassCard>
-        </motion.div>
       </div>
 
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-[var(--accent-purple)]/5 rounded-full blur-[100px]" />
-        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[var(--accent-cyan)]/5 rounded-full blur-[100px]" />
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-[var(--accent-red)]/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[var(--accent-orange)]/5 rounded-full blur-[100px]" />
       </div>
     </section>
   );
 }
+
+
+
+
+

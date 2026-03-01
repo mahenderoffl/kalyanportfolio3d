@@ -9,34 +9,34 @@ import GlassCard from "../ui/GlassCard";
 const blogPosts = [
   {
     id: "founding-waveseed-my-vision",
-    title: "Founding WaveSeed: My Vision for the Future",
-    excerpt: "Every successful company starts with a simple observation. Here's how WaveSeed came to be.",
+    title: "Founding CampusBuzz: My Vision for the Future",
+    excerpt: "Every successful platform starts with a simple observation. Here's how CampusBuzz came to be.",
     category: "Founder Story",
     date: "Feb 2026",
     readTime: "8 min",
-    image: "/IMG_20230921_084941.jpg",
-    gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-    accentColor: "var(--accent-pink)",
+    image: "/bio1.jpg",
+    gradient: "linear-gradient(135deg, #0284c7 0%, #2dd4bf 100%)",
+    accentColor: "var(--accent-orange)",
   },
   {
     id: "all-about-me",
-    title: "All About Mahender Banoth",
-    excerpt: "My journey from IIT Patna to founding multiple startups and building AI-powered solutions.",
+    title: "All About Boda Kalyan Singh",
+    excerpt: "My journey from IIT Kharagpur to founding multiple startups and building AI-powered solutions.",
     category: "Personal Story",
     date: "Feb 2026",
     readTime: "10 min",
-    image: "/IMG_20231223_133945.jpg",
+    image: "/bio3.jpg",
     gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    accentColor: "var(--accent-purple)",
+    accentColor: "var(--accent-red)",
   },
   {
     id: "life-at-iit-patna",
-    title: "Life at IIT Patna",
+    title: "Life at IIT Kharagpur",
     excerpt: "Campus experiences, academics, and the journey of growth at one of India's premier institutes.",
     category: "Campus Life",
     date: "Feb 2026",
     readTime: "6 min",
-    image: "/iitp-logo.png",
+    image: "/kgp.png",
     gradient: "linear-gradient(135deg, #f97316 0%, #fbbf24 100%)",
     accentColor: "var(--accent-orange)",
   },
@@ -60,7 +60,7 @@ export default function BlogPreview() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs sm:text-sm font-medium text-[var(--accent-cyan)] bg-[var(--accent-cyan)]/10 rounded-full border border-[var(--accent-cyan)]/20">
+          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs sm:text-sm font-medium text-[var(--accent-orange)] bg-[var(--accent-orange)]/10 rounded-full border border-[var(--accent-orange)]/20">
             Blog
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-display font-accent font-bold mb-3 sm:mb-4">
@@ -86,7 +86,7 @@ export default function BlogPreview() {
               <Link href={`/blog/${post.id}`}>
                 <GlassCard className="h-full overflow-hidden hover:scale-[1.02] transition-transform duration-200 group">
                   {/* Image */}
-                  <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden bg-[var(--bg-tertiary)]">
+                  <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden bg-black/40 backdrop-blur-md">
                     <Image
                       src={post.image}
                       alt={post.title}
@@ -118,7 +118,7 @@ export default function BlogPreview() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-base sm:text-lg font-bold text-[var(--text-primary)] mb-1.5 sm:mb-2 group-hover:text-[var(--accent-purple)] transition-colors line-clamp-2">
+                    <h3 className="text-base sm:text-lg font-bold text-[var(--text-primary)] mb-1.5 sm:mb-2 group-hover:text-[var(--accent-red)] transition-colors line-clamp-2">
                       {post.title}
                     </h3>
 
@@ -165,3 +165,10 @@ export default function BlogPreview() {
     </section>
   );
 }
+
+
+
+
+
+
+

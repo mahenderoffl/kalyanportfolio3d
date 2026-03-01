@@ -23,7 +23,7 @@ function EarthMesh() {
       {/* Outer glow */}
       <Sphere ref={glowRef} args={[1.15, 32, 32]}>
         <meshBasicMaterial
-          color="#8B5CF6"
+          color="#ff5e00"
           transparent
           opacity={0.1}
           side={THREE.BackSide}
@@ -33,10 +33,10 @@ function EarthMesh() {
       {/* Main Earth sphere with wireframe */}
       <Sphere ref={meshRef} args={[1, 64, 64]}>
         <meshStandardMaterial
-          color="#1a1a2e"
+          color="#1a0505"
           wireframe
           wireframeLinewidth={1}
-          emissive="#8B5CF6"
+          emissive="#ff5e00"
           emissiveIntensity={0.15}
         />
       </Sphere>
@@ -44,7 +44,7 @@ function EarthMesh() {
       {/* Inner core glow */}
       <Sphere args={[0.95, 32, 32]}>
         <meshBasicMaterial
-          color="#0a0a0f"
+          color="#0a0505"
           transparent
           opacity={0.8}
         />
@@ -54,7 +54,7 @@ function EarthMesh() {
       {[-60, -30, 0, 30, 60].map((lat) => (
         <mesh key={lat} rotation={[Math.PI / 2, 0, 0]} position={[0, Math.sin((lat * Math.PI) / 180), 0]}>
           <ringGeometry args={[Math.cos((lat * Math.PI) / 180) * 0.99, Math.cos((lat * Math.PI) / 180) * 1.01, 64]} />
-          <meshBasicMaterial color="#06b6d4" transparent opacity={0.3} side={THREE.DoubleSide} />
+          <meshBasicMaterial color="#ff0844" transparent opacity={0.3} side={THREE.DoubleSide} />
         </mesh>
       ))}
 
@@ -62,7 +62,7 @@ function EarthMesh() {
       {[0, 30, 60, 90, 120, 150].map((lng) => (
         <mesh key={lng} rotation={[0, (lng * Math.PI) / 180, 0]}>
           <torusGeometry args={[1, 0.005, 8, 64]} />
-          <meshBasicMaterial color="#8B5CF6" transparent opacity={0.25} />
+          <meshBasicMaterial color="#ff5e00" transparent opacity={0.25} />
         </mesh>
       ))}
 
@@ -83,7 +83,7 @@ function EarthMesh() {
         return (
           <mesh key={i} position={[x * 1.02, y * 1.02, z * 1.02]}>
             <sphereGeometry args={[0.03, 8, 8]} />
-            <meshBasicMaterial color="#06b6d4" />
+            <meshBasicMaterial color="#ff0844" />
           </mesh>
         );
       })}
@@ -100,8 +100,8 @@ export default function Earth3D() {
         gl={{ alpha: true, antialias: true }}
       >
         <ambientLight intensity={0.3} />
-        <pointLight position={[10, 10, 10]} intensity={0.5} color="#8B5CF6" />
-        <pointLight position={[-10, -10, -10]} intensity={0.3} color="#06b6d4" />
+        <pointLight position={[10, 10, 10]} intensity={0.5} color="#ff5e00" />
+        <pointLight position={[-10, -10, -10]} intensity={0.3} color="#ff0844" />
         <Suspense fallback={null}>
           <EarthMesh />
         </Suspense>

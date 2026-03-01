@@ -10,10 +10,9 @@ import Icon from "@/components/ui/Icon";
 export default function ResumePage() {
   const [isLoading, setIsLoading] = useState(true);
   const [pdfError, setPdfError] = useState(false);
-  const pdfUrl = "/Mahender_Tech_CV.pdf";
-  
+  const pdfUrl = "/Boda_Kalyan_Singh_CV.pdf";
+
   useEffect(() => {
-    // Set a timeout to handle cases where PDF fails to load
     const timer = setTimeout(() => {
       if (isLoading) {
         setPdfError(true);
@@ -26,7 +25,7 @@ export default function ResumePage() {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "Mahender_Banoth_Resume.pdf";
+    link.download = "Boda_Kalyan_Singh_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -34,7 +33,6 @@ export default function ResumePage() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Background Effects */}
       <div className="fixed inset-0 -z-10">
         <GradientMesh />
         <StarField starCount={80} />
@@ -63,7 +61,7 @@ export default function ResumePage() {
                 Resume
               </h1>
               <p className="text-[var(--text-tertiary)] mt-1">
-                Mahender Banoth - Tech Entrepreneur & Product Architect
+                Boda Kalyan Singh - AI Developer & Full-Stack Engineer
               </p>
             </div>
 
@@ -71,41 +69,35 @@ export default function ResumePage() {
               onClick={handleDownload}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-pink)] text-white font-medium shadow-lg shadow-[var(--accent-purple)]/20 hover:shadow-[var(--accent-purple)]/40 transition-shadow"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[var(--accent-red)] to-[var(--accent-orange)] text-white font-medium shadow-lg shadow-[var(--accent-red)]/20 hover:shadow-[var(--accent-red)]/40 transition-shadow"
             >
               <Icon name="file" size={18} />
               <span>Download PDF</span>
             </motion.button>
           </motion.div>
 
-          {/* PDF Viewer Container */}
+          {/* PDF Viewer */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="relative rounded-2xl overflow-hidden border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-xl shadow-2xl"
           >
-            {/* Loading State */}
             {isLoading && !pdfError && (
               <div className="absolute inset-0 flex items-center justify-center bg-[var(--bg-secondary)]">
                 <div className="flex flex-col items-center gap-3">
-                  <div className="w-10 h-10 border-3 border-[var(--accent-purple)] border-t-transparent rounded-full animate-spin" />
-                  <span className="text-[var(--text-tertiary)] text-sm">
-                    Loading resume...
-                  </span>
+                  <div className="w-10 h-10 border-3 border-[var(--accent-red)] border-t-transparent rounded-full animate-spin" />
+                  <span className="text-[var(--text-tertiary)] text-sm">Loading resume...</span>
                 </div>
               </div>
             )}
 
-            {/* PDF Error/Fallback State */}
             {pdfError ? (
               <div className="flex flex-col items-center justify-center py-20 px-4" style={{ minHeight: "calc(100vh - 180px)" }}>
-                <div className="w-16 h-16 mb-6 rounded-full bg-[var(--bg-tertiary)] flex items-center justify-center">
-                  <Icon name="file" size={32} className="text-[var(--accent-purple)]" />
+                <div className="w-16 h-16 mb-6 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center">
+                  <Icon name="file" size={32} className="text-[var(--accent-red)]" />
                 </div>
-                <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">
-                  PDF Preview Unavailable
-                </h3>
+                <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">PDF Preview Unavailable</h3>
                 <p className="text-[var(--text-tertiary)] text-center max-w-md mb-6">
                   Your browser doesn&apos;t support inline PDF viewing. Please download the resume to view it.
                 </p>
@@ -114,7 +106,7 @@ export default function ResumePage() {
                     onClick={handleDownload}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-pink)] text-white font-medium shadow-lg"
+                    className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--accent-red)] to-[var(--accent-orange)] text-white font-medium shadow-lg"
                   >
                     <Icon name="file" size={18} />
                     <span>Download PDF</span>
@@ -123,7 +115,7 @@ export default function ResumePage() {
                     href={pdfUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--bg-tertiary)] text-[var(--text-primary)] font-medium hover:bg-[var(--bg-secondary)] transition-colors"
+                    className="flex items-center gap-2 px-6 py-3 rounded-xl bg-black/40 backdrop-blur-md text-[var(--text-primary)] font-medium hover:bg-[var(--bg-secondary)] transition-colors"
                   >
                     <Icon name="globe" size={18} />
                     <span>Open in New Tab</span>
@@ -131,7 +123,6 @@ export default function ResumePage() {
                 </div>
               </div>
             ) : (
-              /* PDF Embed using object tag for better compatibility */
               <object
                 data={pdfUrl}
                 type="application/pdf"
@@ -143,7 +134,6 @@ export default function ResumePage() {
                   setIsLoading(false);
                 }}
               >
-                {/* Fallback for browsers that don't support object tag */}
                 <embed
                   src={pdfUrl}
                   type="application/pdf"
@@ -167,7 +157,7 @@ export default function ResumePage() {
             </p>
             <button
               onClick={handleDownload}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-pink)] text-white font-medium"
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-[var(--accent-red)] to-[var(--accent-orange)] text-white font-medium"
             >
               <Icon name="file" size={18} />
               <span>Download Resume</span>
@@ -183,23 +173,23 @@ export default function ResumePage() {
           >
             <Link
               href="/#contact"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-black/40 backdrop-blur-md text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
             >
               <Icon name="users" size={16} />
               <span>Contact Me</span>
             </Link>
             <Link
               href="/#projects"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-black/40 backdrop-blur-md text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
             >
               <Icon name="layers" size={16} />
               <span>View Projects</span>
             </Link>
             <a
-              href="https://linkedin.com/in/mahenderbanoth"
+              href="https://linkedin.com/in/bodakalyansingh"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-black/40 backdrop-blur-md text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
             >
               <Icon name="globe" size={16} />
               <span>LinkedIn</span>
@@ -210,3 +200,10 @@ export default function ResumePage() {
     </div>
   );
 }
+
+
+
+
+
+
+

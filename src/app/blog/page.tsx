@@ -11,25 +11,25 @@ import Image from "next/image";
 const blogPosts = [
   {
     id: "all-about-me",
-    title: "All About Mahender Banoth: My Journey from IIT Patna to Building AI Systems",
+    title: "All About Boda Kalyan Singh: My Journey from IIT Kharagpur to Building AI Systems",
     excerpt:
       "From being a student at the prestigious Indian Institute of Technology Patna to founding WaveSeed Co. — this is my story of building AI-powered solutions that matter.",
     date: "February 2026",
     readTime: "10 min read",
     category: "Personal Story",
     featured: true,
-    image: "/mahender-banoth.png",
+    image: "/kalyan-profile.png",
   },
   {
     id: "life-at-iit-patna",
-    title: "Life at IIT Patna: Campus, Culture, and Opportunities",
+    title: "Life at IIT Kharagpur: Campus, Culture, and Opportunities",
     excerpt:
       "An inside look at life at the Indian Institute of Technology Patna — the academic excellence, vibrant campus culture, and incredible opportunities.",
     date: "February 2026",
     readTime: "7 min read",
     category: "Campus Life",
     featured: false,
-    image: "/iitp-logo.png",
+    image: "/bio3.jpg",
   },
   {
     id: "founding-waveseed-my-vision",
@@ -64,7 +64,7 @@ export default function BlogPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-[var(--accent-cyan)] bg-[var(--accent-cyan)]/10 rounded-full border border-[var(--accent-cyan)]/20">
+            <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-[var(--accent-orange)] bg-[var(--accent-orange)]/10 rounded-full border border-[var(--accent-orange)]/20">
               Blog
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
@@ -88,7 +88,7 @@ export default function BlogPage() {
                 className="mb-12"
               >
                 <Link href={`/blog/${post.id}`}>
-                  <GlassCard className="overflow-hidden hover:border-[var(--accent-purple)]/50 transition-colors group cursor-pointer">
+                  <GlassCard className="overflow-hidden hover:border-[var(--accent-red)]/50 transition-colors group cursor-pointer">
                     {post.image && (
                       <div className="relative w-full h-48 sm:h-64">
                         <Image
@@ -102,12 +102,12 @@ export default function BlogPage() {
                     )}
                     <div className="p-8">
                       <div className="flex items-center gap-2 mb-4">
-                        <span className="px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-pink)] text-white">
+                        <span className="px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-[var(--accent-red)] to-[var(--accent-orange)] text-white">
                           Featured
                         </span>
                         <span className="text-xs text-[var(--text-muted)]">{post.category}</span>
                       </div>
-                      <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-3 group-hover:text-[var(--accent-purple)] transition-colors">
+                      <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-3 group-hover:text-[var(--accent-red)] transition-colors">
                         {post.title}
                       </h2>
                       <p className="text-[var(--text-tertiary)] mb-4">{post.excerpt}</p>
@@ -134,7 +134,7 @@ export default function BlogPage() {
                 .filter((post) => !post.featured)
                 .map((post) => (
                   <Link key={post.id} href={`/blog/${post.id}`}>
-                    <GlassCard className="overflow-hidden hover:border-[var(--accent-purple)]/50 transition-colors group cursor-pointer">
+                    <GlassCard className="overflow-hidden hover:border-[var(--accent-red)]/50 transition-colors group cursor-pointer">
                       <div className="flex flex-col sm:flex-row">
                         {post.image && (
                           <div className="relative w-full sm:w-48 h-32 sm:h-auto flex-shrink-0">
@@ -150,7 +150,7 @@ export default function BlogPage() {
                           <div className="flex items-center gap-2 mb-2">
                             <span className="text-xs text-[var(--text-muted)]">{post.category}</span>
                           </div>
-                          <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent-purple)] transition-colors">
+                          <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--accent-red)] transition-colors">
                             {post.title}
                           </h3>
                           <p className="text-sm text-[var(--text-tertiary)] mb-3">{post.excerpt}</p>
@@ -173,3 +173,11 @@ export default function BlogPage() {
     </main>
   );
 }
+
+
+
+
+
+
+
+

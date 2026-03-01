@@ -44,7 +44,7 @@ export default function AllAboutMePage() {
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
               <span className="text-[var(--text-primary)]">All About</span>{" "}
-              <span className="gradient-text">Mahender Banoth</span>
+              <span className="gradient-text">Boda Kalyan Singh</span>
             </h1>
             
             <div className="flex items-center justify-center gap-4 text-sm text-[var(--text-muted)] mb-8">
@@ -55,10 +55,10 @@ export default function AllAboutMePage() {
 
             {/* Profile Image */}
             <div className="flex justify-center mb-8">
-              <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-[var(--accent-purple)]/50 shadow-[0_0_40px_rgba(139,92,246,0.4)]">
+              <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-[var(--accent-red)]/50 shadow-[0_0_40px_rgba(139,92,246,0.4)]">
                 <Image
-                  src="/mahender-banoth.png"
-                  alt="Mahender Banoth"
+                  src="/kalyan-profile.png"
+                  alt="Boda Kalyan Singh"
                   fill
                   className="object-cover object-top"
                   priority
@@ -74,14 +74,14 @@ export default function AllAboutMePage() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <GlassCard className="p-8 md:p-12 mb-8">
-              {/* IIT Patna Section */}
+              {/* IIT Kharagpur Section */}
               <section className="mb-12">
                 <div className="flex flex-col md:flex-row items-start gap-6 mb-8">
-                  {/* IIT Patna Logo */}
+                  {/* IIT Kharagpur Logo */}
                   <div className="w-24 h-24 md:w-32 md:h-32 relative flex-shrink-0 bg-white rounded-2xl p-2 mx-auto md:mx-0">
                     <Image
-                      src="/iitp-logo.png"
-                      alt="IIT Patna Logo"
+                      src="/bio3.jpg"
+                      alt="IIT Kharagpur Logo"
                       fill
                       className="object-contain p-2"
                     />
@@ -96,7 +96,7 @@ export default function AllAboutMePage() {
                 </div>
                 
                 <p className="text-lg text-[var(--text-secondary)] mb-8 leading-relaxed">
-                  My journey at <strong className="text-[var(--accent-orange)]">IIT Patna</strong> has been nothing short of transformative. 
+                  My journey at <strong className="text-[var(--accent-orange)]">IIT Kharagpur</strong> has been nothing short of transformative. 
                   Being at one of India&apos;s premier institutes of national importance, I&apos;ve had the privilege of learning from 
                   world-class faculty, collaborating with brilliant minds, and building solutions that matter.
                 </p>
@@ -105,15 +105,15 @@ export default function AllAboutMePage() {
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-[var(--glass-border)]">
                     <Image
-                      src="/IMG_20230921_084941.jpg"
-                      alt="Mahender at IIT Patna"
+                      src="/bio1.jpg"
+                      alt="Kalyan at IIT Kharagpur"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-[var(--glass-border)]">
                     <Image
-                      src="/IMG_20231223_133945.jpg"
+                      src="/bio2.png"
                       alt="Campus Life"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
@@ -122,11 +122,11 @@ export default function AllAboutMePage() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div className="p-5 bg-[var(--bg-tertiary)] rounded-xl border border-[var(--glass-border)]">
+                  <div className="p-5 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--glass-border)]">
                     <h4 className="font-semibold text-[var(--accent-orange)] mb-3">🎓 Tata Foundation Scholar</h4>
                     <p className="text-sm text-[var(--text-tertiary)] leading-relaxed">Awarded the prestigious Tata Foundation Scholarship (2023-2026) for academic excellence and leadership potential.</p>
                   </div>
-                  <div className="p-4 bg-[var(--bg-tertiary)] rounded-xl border border-[var(--glass-border)]">
+                  <div className="p-4 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--glass-border)]">
                     <h4 className="font-semibold text-[var(--accent-orange)] mb-2">👔 Internship & Placement Coordinator</h4>
                     <p className="text-sm text-[var(--text-tertiary)]">Coordinated 15+ placement drives, improving placement success rate by 25%.</p>
                   </div>
@@ -141,23 +141,23 @@ export default function AllAboutMePage() {
                 
                 <div className="space-y-6">
                   <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
-                    I&apos;m <strong className="text-[var(--text-primary)]">Mahender Banoth</strong>, a founder, full-stack AI architect, 
+                    I&apos;m <strong className="text-[var(--text-primary)]">Boda Kalyan Singh</strong>, a founder, full-stack AI architect, 
                     and data scientist based in Hyderabad, India. My passion lies at the intersection of technology and business, 
                     where I build AI-powered solutions that automate complexity away.
                   </p>
 
                   <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-6">
                     <Image
-                      src="/IMG_20231223_133945.jpg"
-                      alt="Mahender Banoth"
+                      src="/bio2.png"
+                      alt="Boda Kalyan Singh"
                       fill
                       className="object-cover object-top"
                     />
                   </div>
 
                   <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
-                    While pursuing my BBA at <strong className="text-[var(--accent-orange)]">IIT Patna</strong>, I founded 
-                    <a href="https://waveseed.app" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-purple)] hover:underline font-semibold"> WaveSeed Co.</a>, 
+                    While pursuing my BBA at <strong className="text-[var(--accent-orange)]">IIT Kharagpur</strong>, I founded 
+                    <a href="https://waveseed.app" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-red)] hover:underline font-semibold"> WaveSeed Co.</a>, 
                     a company focused on building intelligent automation tools. What started as a side project has evolved into 
                     a suite of products that help businesses reduce manual work by 85%.
                   </p>
@@ -171,7 +171,7 @@ export default function AllAboutMePage() {
                 </h2>
                 
                 {/* WaveSeed Logo and Growth */}
-                <div className="mb-6 p-6 bg-[var(--bg-tertiary)] rounded-xl border border-[var(--accent-purple)]/30">
+                <div className="mb-6 p-6 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--accent-red)]/30">
                   <div className="flex flex-col sm:flex-row items-start gap-4">
                     <div className="w-20 h-20 relative flex-shrink-0">
                       <Image
@@ -192,7 +192,7 @@ export default function AllAboutMePage() {
                       </div>
                       <p className="text-[var(--text-tertiary)]">
                         AI Marketing Agency - Automating digital marketing with intelligent systems.
-                        <a href="https://waveseed.app" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-purple)] hover:underline ml-2">
+                        <a href="https://waveseed.app" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-red)] hover:underline ml-2">
                           Visit waveseed.app →
                         </a>
                       </p>
@@ -201,9 +201,9 @@ export default function AllAboutMePage() {
                 </div>
 
                 {/* WaveSeed Launch Video */}
-                <div className="mb-6 p-6 bg-[var(--bg-tertiary)] rounded-xl border border-[var(--accent-pink)]/30">
+                <div className="mb-6 p-6 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--accent-orange)]/30">
                   <h4 className="font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-                    <svg className="w-5 h-5 text-[var(--accent-pink)]" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[var(--accent-orange)]" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
                     </svg>
                     WaveSeed Launch Video
@@ -220,24 +220,24 @@ export default function AllAboutMePage() {
                 </div>
                 
                 <div className="grid gap-4">
-                  <div className="p-5 bg-[var(--bg-tertiary)] rounded-xl border border-[var(--accent-cyan)]/30">
+                  <div className="p-5 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--accent-orange)]/30">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-2xl">🌐</span>
                       <h4 className="font-semibold text-[var(--text-primary)] text-lg">
-                        <a href="https://wavebase.waveseed.app" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent-cyan)] transition-colors">
+                        <a href="https://wavebase.waveseed.app" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent-orange)] transition-colors">
                           WaveBase
                         </a>
                       </h4>
                     </div>
                     <p className="text-[var(--text-tertiary)]">
                       AI Website Builder - Create stunning websites with AI assistance.
-                      <a href="https://wavebase.waveseed.app" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-cyan)] hover:underline ml-2">
+                      <a href="https://wavebase.waveseed.app" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-orange)] hover:underline ml-2">
                         Try it →
                       </a>
                     </p>
                   </div>
                   
-                  <div className="p-5 bg-[var(--bg-tertiary)] rounded-xl border border-[var(--accent-pink)]/30">
+                  <div className="p-5 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--accent-orange)]/30">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-2xl">📝</span>
                       <h4 className="font-semibold text-[var(--text-primary)]">WaveSignals</h4>
@@ -260,7 +260,7 @@ export default function AllAboutMePage() {
                     { value: "10+", label: "Global Clients" },
                     { value: "5K+", label: "Users Impacted" },
                   ].map((stat) => (
-                    <div key={stat.label} className="text-center p-4 bg-[var(--bg-tertiary)] rounded-xl">
+                    <div key={stat.label} className="text-center p-4 bg-black/40 backdrop-blur-md rounded-xl">
                       <div className="text-2xl md:text-3xl font-bold gradient-text mb-1">{stat.value}</div>
                       <div className="text-xs text-[var(--text-muted)]">{stat.label}</div>
                     </div>
@@ -277,16 +277,16 @@ export default function AllAboutMePage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-xl overflow-hidden">
                     <Image
-                      src="/IMG_20230921_084941.jpg"
-                      alt="Mahender Banoth"
+                      src="/bio1.jpg"
+                      alt="Boda Kalyan Singh"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="relative aspect-square rounded-xl overflow-hidden">
                     <Image
-                      src="/IMG_20231223_133945.jpg"
-                      alt="Mahender Banoth"
+                      src="/bio2.png"
+                      alt="Boda Kalyan Singh"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
@@ -307,13 +307,13 @@ export default function AllAboutMePage() {
                 
                 <div className="flex flex-wrap gap-4">
                   <a 
-                    href="mailto:mahender@waveseed.app"
+                    href="mailto:bodakalyansingh@gmail.com"
                     className="btn-primary px-6 py-3"
                   >
                     Get in Touch
                   </a>
                   <a 
-                    href="https://linkedin.com/in/mahendercreates"
+                    href="https://linkedin.com/in/bodakalyansingh"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-ghost px-6 py-3"
@@ -331,3 +331,12 @@ export default function AllAboutMePage() {
     </main>
   );
 }
+
+
+
+
+
+
+
+
+

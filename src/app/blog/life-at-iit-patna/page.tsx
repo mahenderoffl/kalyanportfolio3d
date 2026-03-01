@@ -44,7 +44,7 @@ export default function LifeAtIITPatnaPage() {
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
               <span className="text-[var(--text-primary)]">Life at</span>{" "}
-              <span className="text-[var(--accent-orange)]">IIT Patna</span>
+              <span className="text-[var(--accent-orange)]">IIT Kharagpur</span>
             </h1>
             
             <div className="flex items-center justify-center gap-4 text-sm text-[var(--text-muted)] mb-8">
@@ -63,8 +63,8 @@ export default function LifeAtIITPatnaPage() {
           >
             <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden">
               <Image
-                src="/iitp-logo.png"
-                alt="IIT Patna Campus"
+                src="/bio3.jpg"
+                alt="IIT Kharagpur Campus"
                 fill
                 className="object-contain bg-white"
                 priority
@@ -86,7 +86,7 @@ export default function LifeAtIITPatnaPage() {
                 </h2>
                 
                 <p className="text-lg text-[var(--text-secondary)] mb-6 leading-relaxed">
-                  <strong className="text-[var(--accent-orange)]">IIT Patna</strong> is one of the eight new IITs 
+                  <strong className="text-[var(--accent-orange)]">IIT Kharagpur</strong> is one of the eight new IITs 
                   established by the Government of India in 2008. Located in Bihar, it has quickly risen to become 
                   one of the premier technical institutes in India, known for its excellent faculty, cutting-edge 
                   research, and vibrant campus life.
@@ -105,28 +105,28 @@ export default function LifeAtIITPatnaPage() {
                 </h2>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="p-5 bg-[var(--bg-tertiary)] rounded-xl border border-[var(--glass-border)]">
+                  <div className="p-5 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--glass-border)]">
                     <h4 className="font-semibold text-[var(--text-primary)] mb-3">World-Class Faculty</h4>
                     <p className="text-sm text-[var(--text-tertiary)] leading-relaxed">
                       Our professors are alumni of top global universities including MIT, Stanford, IISc, 
                       and other prestigious institutions, bringing world-class knowledge to the classroom.
                     </p>
                   </div>
-                  <div className="p-5 bg-[var(--bg-tertiary)] rounded-xl border border-[var(--glass-border)]">
+                  <div className="p-5 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--glass-border)]">
                     <h4 className="font-semibold text-[var(--text-primary)] mb-3">Research Focus</h4>
                     <p className="text-sm text-[var(--text-tertiary)] leading-relaxed">
                       Strong emphasis on research with multiple centers of excellence in AI, 
                       renewable energy, and advanced materials.
                     </p>
                   </div>
-                  <div className="p-5 bg-[var(--bg-tertiary)] rounded-xl border border-[var(--glass-border)]">
+                  <div className="p-5 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--glass-border)]">
                     <h4 className="font-semibold text-[var(--text-primary)] mb-3">Industry Connections</h4>
                     <p className="text-sm text-[var(--text-tertiary)] leading-relaxed">
                       Strong ties with leading companies ensuring excellent placement opportunities 
                       and industry exposure.
                     </p>
                   </div>
-                  <div className="p-5 bg-[var(--bg-tertiary)] rounded-xl border border-[var(--glass-border)]">
+                  <div className="p-5 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--glass-border)]">
                     <h4 className="font-semibold text-[var(--text-primary)] mb-3">State-of-art Labs</h4>
                     <p className="text-sm text-[var(--text-tertiary)] leading-relaxed">
                       Modern laboratories equipped with the latest technology for hands-on learning 
@@ -139,26 +139,26 @@ export default function LifeAtIITPatnaPage() {
               {/* My Experience */}
               <section className="mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-6">
-                  My Experience at IIT Patna
+                  My Experience at IIT Kharagpur
                 </h2>
                 
                 <div className="space-y-6">
                   <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
-                    Joining IIT Patna for my BBA has been one of the best decisions of my life. 
+                    Joining IIT Kharagpur for my BBA has been one of the best decisions of my life. 
                     The unique combination of business education at an engineering-focused institute 
                     has given me a competitive edge in understanding both technology and business.
                   </p>
 
                   <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-6">
                     <Image
-                      src="/IMG_20230921_084941.jpg"
-                      alt="Mahender at IIT Patna"
+                      src="/bio1.jpg"
+                      alt="Kalyan at IIT Kharagpur"
                       fill
                       className="object-cover"
                     />
                   </div>
 
-                  <div className="p-6 bg-gradient-to-r from-[var(--accent-orange)]/10 to-[var(--accent-purple)]/10 rounded-xl border border-[var(--accent-orange)]/30">
+                  <div className="p-6 bg-gradient-to-r from-[var(--accent-orange)]/10 to-[var(--accent-red)]/10 rounded-xl border border-[var(--accent-orange)]/30">
                     <h4 className="font-semibold text-[var(--accent-orange)] mb-3">🎓 Tata Foundation Scholar (2023-2026)</h4>
                     <p className="text-[var(--text-secondary)] leading-relaxed">
                       I&apos;m honored to be a Tata Foundation Scholar, which recognizes academic excellence 
@@ -176,7 +176,7 @@ export default function LifeAtIITPatnaPage() {
                 </h2>
                 
                 <div className="space-y-4">
-                  <div className="p-5 bg-[var(--bg-tertiary)] rounded-xl border border-[var(--accent-cyan)]/30">
+                  <div className="p-5 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--accent-orange)]/30">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-2xl">👔</span>
                       <h4 className="font-semibold text-[var(--text-primary)]">Internship & Placement Coordinator</h4>
@@ -187,7 +187,7 @@ export default function LifeAtIITPatnaPage() {
                     </p>
                   </div>
                   
-                  <div className="p-5 bg-[var(--bg-tertiary)] rounded-xl border border-[var(--accent-purple)]/30">
+                  <div className="p-5 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--accent-red)]/30">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-2xl">🚀</span>
                       <h4 className="font-semibold text-[var(--text-primary)]">Co-Founder, CampusBuzz</h4>
@@ -209,16 +209,16 @@ export default function LifeAtIITPatnaPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-xl overflow-hidden">
                     <Image
-                      src="/IMG_20231223_133945.jpg"
-                      alt="Campus Life at IIT Patna"
+                      src="/bio2.png"
+                      alt="Campus Life at IIT Kharagpur"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <div className="relative aspect-square rounded-xl overflow-hidden bg-[var(--bg-tertiary)] flex items-center justify-center">
+                  <div className="relative aspect-square rounded-xl overflow-hidden bg-black/40 backdrop-blur-md flex items-center justify-center">
                     <Image
-                      src="/iitp-logo.png"
-                      alt="IIT Patna Logo"
+                      src="/bio3.jpg"
+                      alt="IIT Kharagpur Logo"
                       width={150}
                       height={150}
                       className="object-contain"
@@ -234,13 +234,13 @@ export default function LifeAtIITPatnaPage() {
                 </h2>
                 
                 <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
-                  If you&apos;re a prospective student or just curious about life at IIT Patna, feel free 
+                  If you&apos;re a prospective student or just curious about life at IIT Kharagpur, feel free 
                   to reach out. I&apos;m always happy to share my experiences and help fellow students.
                 </p>
                 
                 <div className="flex flex-wrap gap-4">
                   <a 
-                    href="mailto:mahender_2311res32@iitp.ac.in"
+                    href="mailto:bodakalyansingh@gmail.com"
                     className="btn-primary px-6 py-3"
                   >
                     Email Me (Institute)
@@ -262,3 +262,11 @@ export default function LifeAtIITPatnaPage() {
     </main>
   );
 }
+
+
+
+
+
+
+
+

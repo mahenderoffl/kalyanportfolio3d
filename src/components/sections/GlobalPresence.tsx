@@ -122,7 +122,7 @@ export default function GlobalPresence() {
           transition={{ duration: 0.4 }}
           className="text-center mb-10 sm:mb-12"
         >
-          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs sm:text-sm font-medium text-[var(--accent-cyan)] bg-[var(--accent-cyan)]/10 rounded-full border border-[var(--accent-cyan)]/20">
+          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs sm:text-sm font-medium text-[var(--accent-orange)] bg-[var(--accent-orange)]/10 rounded-full border border-[var(--accent-orange)]/20">
             Worldwide Clients
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-display font-accent font-bold mb-3 sm:mb-4">
@@ -212,7 +212,7 @@ export default function GlobalPresence() {
                   {[1, 2, 3, 4].map((ring) => (
                     <div
                       key={ring}
-                      className="absolute rounded-full border border-[var(--accent-purple)]/20"
+                      className="absolute rounded-full border border-[var(--accent-red)]/20"
                       style={{
                         width: `${ring * 25}%`,
                         height: `${ring * 25}%`,
@@ -226,7 +226,7 @@ export default function GlobalPresence() {
                     {[0, 45, 90, 135].map((angle) => (
                       <div
                         key={angle}
-                        className="absolute w-full h-px bg-gradient-to-r from-transparent via-[var(--accent-cyan)]/20 to-transparent"
+                        className="absolute w-full h-px bg-gradient-to-r from-transparent via-[var(--accent-orange)]/20 to-transparent"
                         style={{ transform: `rotate(${angle}deg)` }}
                       />
                     ))}
@@ -333,7 +333,7 @@ export default function GlobalPresence() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2, delay: index * 0.02 }}
-                  className="p-2 sm:p-3 bg-[var(--glass-bg)] border border-[var(--glass-border)] rounded-lg hover:border-[var(--accent-purple)]/50 transition-colors"
+                  className="p-2 sm:p-3 bg-[var(--glass-bg)] border border-[var(--glass-border)] rounded-lg hover:border-[var(--accent-red)]/50 transition-colors"
                 >
                   <div className="flex items-center gap-2">
                     <div
@@ -358,9 +358,14 @@ export default function GlobalPresence() {
 
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-        <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-[var(--accent-purple)]/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-[var(--accent-cyan)]/5 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-[var(--accent-red)]/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-[var(--accent-orange)]/5 rounded-full blur-[120px]" />
       </div>
     </section>
   );
 }
+
+
+
+
+

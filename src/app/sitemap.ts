@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://mahender.waveseed.app';
+  const baseUrl = 'https://bodakalyan.campusbuzz.in';
   // Use a fixed date for consistent sitemap generation
   const lastModified = new Date('2026-02-13T00:00:00.000Z');
 

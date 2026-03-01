@@ -6,10 +6,10 @@ import Image from "next/image";
 
 // Animated typing text for rotating taglines
 const taglines = [
-  "Founder @ WaveSeed Co.",
-  "AI Web Architect × Automation Builder",
-  "Full-Stack Developer × Data Scientist",
-  "Graduate from Indian Institute of Technology Patna",
+  "Software Engineer (AI Developer) @ Xenspire Group",
+  "Full-Stack AI Developer × Automation Builder",
+  "Founder of CampusBuzz • Top 100 Startup",
+  "M.Tech from IIT Kharagpur • Dept Topper",
 ];
 
 // Letter animation variants - optimized for performance
@@ -19,8 +19,8 @@ const letterVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.02, // Faster stagger
-      duration: 0.3, // Shorter duration
+      delay: i * 0.02,
+      duration: 0.3,
       ease: "easeOut",
     },
   }),
@@ -32,7 +32,7 @@ const containerVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.02, // Faster stagger
+      staggerChildren: 0.02,
       delayChildren: 0.1,
     },
   },
@@ -58,7 +58,7 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
     offset: ["start start", "end start"],
   });
 
-  // Simplified scroll transforms - use only opacity for better performance
+  // Simplified scroll transforms
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   // Cycle through taglines
@@ -109,22 +109,22 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
       >
         {/* Glow effects behind image */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] bg-[var(--accent-purple)]/30 rounded-full blur-[80px] animate-pulse" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] bg-[var(--accent-cyan)]/20 rounded-full blur-[60px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] bg-[var(--accent-pink)]/15 rounded-full blur-[50px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] bg-[var(--accent-red)]/30 rounded-full blur-[80px] animate-pulse" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] bg-[var(--accent-orange)]/20 rounded-full blur-[60px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] bg-[var(--accent-orange)]/15 rounded-full blur-[50px]" />
         </div>
-        
+
         {/* Circular border effect */}
         <div className="relative">
-          <div className="absolute inset-0 rounded-full border-2 border-[var(--accent-purple)]/50 animate-spin" style={{ animationDuration: '20s' }} />
-          <div className="absolute inset-2 rounded-full border border-[var(--accent-cyan)]/30" />
-          <div className="absolute inset-4 rounded-full border border-[var(--accent-pink)]/20" />
-          
+          <div className="absolute inset-0 rounded-full border-2 border-[var(--accent-red)]/50 animate-spin" style={{ animationDuration: '20s' }} />
+          <div className="absolute inset-2 rounded-full border border-[var(--accent-orange)]/30" />
+          <div className="absolute inset-4 rounded-full border border-[var(--accent-orange)]/20" />
+
           {/* Profile Image */}
-          <div className="relative w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 rounded-full overflow-hidden border-4 border-[var(--accent-purple)]/60 shadow-[0_0_60px_rgba(139,92,246,0.5)]">
+          <div className="relative w-48 h-48 lg:w-64 lg:h-64 xl:w-80 xl:h-80 rounded-full overflow-hidden border-4 border-[var(--accent-red)]/60 shadow-[0_0_60px_rgba(139,92,246,0.5)]">
             <Image
-              src="/mahender-banoth.png"
-              alt="Mahender Banoth"
+              src="/kalyan-profile.png"
+              alt="Boda Kalyan Singh"
               fill
               className="object-cover object-top"
               priority
@@ -142,10 +142,10 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
       >
         {/* Glow effects behind logos */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] lg:w-[280px] lg:h-[280px] bg-[var(--accent-cyan)]/20 rounded-full blur-[60px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] lg:w-[220px] lg:h-[220px] bg-[var(--accent-purple)]/15 rounded-full blur-[50px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] lg:w-[280px] lg:h-[280px] bg-[var(--accent-orange)]/20 rounded-full blur-[60px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] lg:w-[220px] lg:h-[220px] bg-[var(--accent-red)]/15 rounded-full blur-[50px]" />
         </div>
-        
+
         {/* Logo Box */}
         <div className="relative w-40 h-40 lg:w-52 lg:h-52 xl:w-64 xl:h-64 rounded-2xl overflow-hidden border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-md shadow-[0_0_40px_rgba(6,182,212,0.3)] flex items-center justify-center">
           {/* Animated logos */}
@@ -159,36 +159,36 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
               className="relative w-full h-full"
             >
               <Image
-                src={["/waveseed-logo-white.png", "/mahender-pic.png", "/iitp-logo.png", "/iitp-pic-mh.jpg"][currentTagline]}
-                alt={["WaveSeed", "Mahender Banoth", "IIT Patna", "At IIT Patna"][currentTagline]}
+                src={["/campusbuzz-icon.png", "/kalyan-pic.png", "/campusbuzz-icon.png", "/kalyan-pic.png"][currentTagline]}
+                alt={["CampusBuzz", "Kalyan Singh", "CampusBuzz", "At IIT KGP"][currentTagline]}
                 fill
                 className={currentTagline === 1 || currentTagline === 3 ? "object-cover object-top" : "object-contain p-4"}
               />
             </motion.div>
           </AnimatePresence>
-          
+
           {/* Corner accents */}
-          <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[var(--accent-cyan)]/50 rounded-tl-2xl" />
-          <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[var(--accent-purple)]/50 rounded-br-2xl" />
+          <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[var(--accent-orange)]/50 rounded-tl-2xl" />
+          <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[var(--accent-red)]/50 rounded-br-2xl" />
         </div>
       </motion.div>
 
-      {/* Main content - Centered as original */}
+      {/* Main content - Centered */}
       <motion.div
         style={{ opacity }}
         className="relative z-10 px-4 sm:px-6 max-w-5xl mx-auto w-full will-change-[opacity] text-center"
       >
-        {/* Mobile Profile Image - Only visible on mobile */}
+        {/* Mobile Profile Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mb-6 sm:mb-8 md:hidden"
         >
-          <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden border-2 border-[var(--accent-purple)]/50 shadow-[0_0_30px_rgba(139,92,246,0.3)]">
+          <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden border-2 border-[var(--accent-red)]/50 shadow-[0_0_30px_rgba(139,92,246,0.3)]">
             <Image
-              src="/mahender-banoth.png"
-              alt="Mahender Banoth"
+              src="/kalyan-profile.png"
+              alt="Boda Kalyan Singh"
               fill
               className="object-cover object-top"
               priority
@@ -196,7 +196,7 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
           </div>
         </motion.div>
 
-        {/* Main headline - BUILDING AI SYSTEMS */}
+        {/* Main headline */}
         <motion.h1
           variants={containerVariants}
           initial="hidden"
@@ -214,7 +214,7 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
           className="mb-4 sm:mb-6"
         >
           <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-accent text-[var(--text-primary)]">
-            Mahender Banoth
+            Boda Kalyan Singh
           </span>
         </motion.div>
 
@@ -241,10 +241,10 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-sm sm:text-base md:text-lg lg:text-body-lg text-[var(--text-tertiary)] max-w-2xl md:max-w-none mb-8 sm:mb-12 px-2 md:px-0"
         >
-          Building the future with AI Powered Solutions.
+          Building the future with AI-Powered Solutions & Intelligent Automation.
           <br className="hidden sm:block" />
           <span className="text-[var(--text-secondary)]">
-            {" "}One system at a time.
+            {" "}From 50+ AI agents to end-to-end SaaS platforms.
           </span>
         </motion.p>
 
@@ -280,7 +280,7 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
           >
             Get in Touch
           </a>
-          
+
           {/* Available for Opportunity badge */}
           <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-3 rounded-full bg-[var(--glass-bg)] border border-[var(--glass-border)] text-[var(--text-secondary)] text-xs sm:text-sm font-medium">
             <span className="relative flex h-2 w-2">
@@ -299,10 +299,10 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
           className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 md:gap-8"
         >
           {[
+            { value: "50+", label: "AI Agents Built" },
             { value: "2+", label: "Startups Founded" },
-            { value: "10+", label: "Products Shipped" },
-            { value: "10+", label: "Global Clients" },
-            { value: "5K+", label: "Users Impacted" },
+            { value: "8.84", label: "CGPA @ IIT KGP" },
+            { value: "550+", label: "Users Impacted" },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -319,7 +319,7 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator - hidden on small screens */}
+      {/* Scroll indicator */}
       <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 hidden sm:block animate-bounce-slow">
         <div className="flex flex-col items-center gap-2 text-[var(--text-muted)]">
           <span className="text-sm">Scroll to Enter</span>
@@ -339,14 +339,13 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
         </div>
       </div>
 
-      {/* Decorative elements - hidden on mobile for performance */}
+      {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden hidden sm:block">
-        {/* Static decorative orbs */}
         <div
           className="absolute w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 rounded-full opacity-20"
           style={{
             background:
-              "radial-gradient(circle, var(--accent-purple) 0%, transparent 70%)",
+              "radial-gradient(circle, var(--accent-red) 0%, transparent 70%)",
             left: "10%",
             top: "20%",
             filter: "blur(40px)",
@@ -356,17 +355,21 @@ export default function HeroSection({ className = "" }: HeroSectionProps) {
           className="absolute w-24 sm:w-36 md:w-48 h-24 sm:h-36 md:h-48 rounded-full opacity-15"
           style={{
             background:
-              "radial-gradient(circle, var(--accent-cyan) 0%, transparent 70%)",
+              "radial-gradient(circle, var(--accent-orange) 0%, transparent 70%)",
             right: "15%",
             bottom: "30%",
             filter: "blur(40px)",
           }}
         />
-
-        {/* Corner gradient accents */}
-        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-[var(--accent-purple)]/5 to-transparent" />
-        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-[var(--accent-cyan)]/5 to-transparent" />
+        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-[var(--accent-red)]/5 to-transparent" />
+        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-[var(--accent-orange)]/5 to-transparent" />
       </div>
     </section>
   );
 }
+
+
+
+
+
+

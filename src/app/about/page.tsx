@@ -1,4 +1,4 @@
-ï»¿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
@@ -14,7 +14,6 @@ export default function AboutPage() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Background Effects */}
       <div className="fixed inset-0 -z-10">
         <GradientMesh />
         <StarField starCount={100} />
@@ -31,17 +30,17 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-10 sm:mb-12 md:mb-16 px-4 sm:px-6"
           >
-            <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs sm:text-sm font-medium text-[var(--accent-purple)] bg-[var(--accent-purple)]/10 rounded-full border border-[var(--accent-purple)]/20">
+            <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs sm:text-sm font-medium text-[var(--accent-red)] bg-[var(--accent-red)]/10 rounded-full border border-[var(--accent-red)]/20">
               About Me
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-display font-accent font-bold mb-4 sm:mb-6">
-              <span className="gradient-text">Mahender</span>{" "}
-              <span className="text-[var(--text-primary)]">Banoth</span>
+              <span className="gradient-text">Boda Kalyan</span>{" "}
+              <span className="text-[var(--text-primary)]">Singh</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-[var(--text-tertiary)] max-w-3xl mx-auto leading-relaxed">
-              Tech entrepreneur building the future of business automation. From 
-              data science to product architecture, I bridge the gap between 
-              technical innovation and real-world impact.
+              AI Developer and Full-Stack Engineer building intelligent automation systems.
+              From 50+ AI agents to end-to-end SaaS platforms, I bridge the gap between
+              cutting-edge AI and real-world products.
             </p>
           </motion.div>
 
@@ -56,11 +55,11 @@ export default function AboutPage() {
               {/* Profile Card */}
               <GlassCard className="p-4 sm:p-6">
                 <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-[var(--accent-purple)] to-[var(--accent-pink)] p-1 overflow-hidden shadow-[0_0_30px_rgba(139,92,246,0.5)]">
+                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-[var(--accent-red)] to-[var(--accent-orange)] p-1 overflow-hidden shadow-[0_0_30px_rgba(139,92,246,0.5)]">
                     <div className="w-full h-full rounded-full overflow-hidden">
                       <Image
-                        src="/mahender-banoth.png"
-                        alt="Mahender Banoth"
+                        src="/kalyan-profile.png"
+                        alt="Boda Kalyan Singh"
                         width={128}
                         height={128}
                         className="w-full h-full object-cover object-top select-none pointer-events-none"
@@ -71,13 +70,13 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <h2 className="text-xl font-bold text-[var(--text-primary)] mb-1">
-                    Mahender Banoth
+                    Boda Kalyan Singh
                   </h2>
                   <p className="text-[var(--text-tertiary)] mb-2">
-                    Founder @ WaveSeed Co.
+                    Software Engineer @ Xenspire Group
                   </p>
                   <p className="text-sm text-[var(--text-muted)] mb-4">
-                    BBA Student @ IIT Patna
+                    M.Tech @ IIT Kharagpur • Dept Topper
                   </p>
                   <div className="flex items-center justify-center gap-2 text-sm">
                     <span className="w-2 h-2 rounded-full bg-[var(--accent-green)] animate-pulse" />
@@ -95,14 +94,14 @@ export default function AboutPage() {
                 </h3>
                 <div className="space-y-4">
                   {[
-                    { label: "Countries Reached", value: "10+", icon: "globe" },
-                    { label: "Products Shipped", value: "10+", icon: "rocket" },
-                    { label: "Technologies Used", value: "60+", icon: "code" },
-                    { label: "Users Reached", value: "5K+", icon: "users" },
+                    { label: "AI Agents Built", value: "50+", icon: "cpu" },
+                    { label: "Startups Founded", value: "2", icon: "rocket" },
+                    { label: "CGPA @ IIT KGP", value: "8.84", icon: "graduation" },
+                    { label: "Users Impacted", value: "550+", icon: "users" },
                   ].map((stat) => (
                     <div key={stat.label} className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--accent-purple)] to-[var(--accent-pink)] flex items-center justify-center">
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--accent-red)] to-[var(--accent-orange)] flex items-center justify-center">
                           <Icon name={stat.icon} size={16} className="text-white" />
                         </div>
                         <span className="text-[var(--text-secondary)]">{stat.label}</span>
@@ -120,7 +119,7 @@ export default function AboutPage() {
                 </h3>
                 <div className="space-y-3">
                   <a
-                    href="mailto:mahender@waveseed.app"
+                    href="mailto:bodakalyansingh@gmail.com"
                     className="btn-primary w-full text-center block"
                   >
                     Send Email
@@ -135,7 +134,7 @@ export default function AboutPage() {
                 <div className="mt-4 pt-4 border-t border-[var(--glass-border)]">
                   <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
                     <a
-                      href="https://linkedin.com/in/mahendercreates"
+                      href="https://linkedin.com/in/bodakalyansingh"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors"
@@ -143,20 +142,12 @@ export default function AboutPage() {
                       LinkedIn
                     </a>
                     <a
-                      href="https://github.com/mahenderoffl"
+                      href="https://github.com/bodakalyansingh"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors"
                     >
                       GitHub
-                    </a>
-                    <a
-                      href="https://instagram.com/waveseedco"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors"
-                    >
-                      Instagram
                     </a>
                   </div>
                 </div>
@@ -177,28 +168,26 @@ export default function AboutPage() {
                 </h3>
                 <div className="prose prose-invert max-w-none text-[var(--text-secondary)] space-y-3 sm:space-y-4 text-sm sm:text-base">
                   <p>
-                    From the bustling tech corridors of Hyderabad to the prestigious 
-                    halls of IIM Bangalore, my journey has been driven by one 
-                    constant: the desire to build products that matter.
+                    From building my first chatbot to deploying 50+ AI agents in production,
+                    my journey has been driven by one constant: the passion to build intelligent
+                    systems that solve real problems.
                   </p>
                   <p>
-                    It started with a simple question during my B.Tech days at 
-                    KITSW Warangal: &ldquo;How can technology solve real problems for 
-                    real people?&rdquo; This question led me down the rabbit hole of 
-                    data science, AI, and eventually, entrepreneurship.
+                    During my M.Tech at IIT Kharagpur, I graduated as the department topper with
+                    a CGPA of 8.84 and won the Best Performance in Technology Award. But academics
+                    were just the start — I founded CampusBuzz, a platform that reached 550+ users
+                    organically and was recognized among the Top 100 startups by Inflection Point Ventures.
                   </p>
                   <p>
-                    Today, as Co-Founder of WaveTech Founders Lab, I&apos;m building 
-                    AI-powered tools that help SMBs automate their growth. Our 
-                    flagship product, WaveSeed Growth, already serves 500+ daily 
-                    users â€” and we&apos;re just getting started.
+                    At NagentAI, I built 50+ AI agents using GPT-4, Claude 3, Llama3, Gemini, and more,
+                    mastering advanced RAG pipelines, multimodal AI, and autonomous agent architectures.
+                    At ISRO, I developed CNN models for satellite-based environmental monitoring.
                   </p>
                   <p>
-                    But building isn&apos;t just about code. Through consulting 
-                    for various clients, I translate complex data into actionable 
-                    business strategies. This perspective â€” as a founder serving 
-                    diverse businesses â€” gives me unique insights into what 
-                    enterprises need and how startups can deliver it.
+                    Today at Xenspire Group, I&apos;m building a complete SaaS platform as a solo
+                    developer — from email automation and campaign management to AI-powered candidate
+                    sourcing. I handle everything: React frontend, FastAPI backend, AI agents, and
+                    third-party integrations like Brightdata, Apollo, and ByteMine.
                   </p>
                 </div>
               </GlassCard>
@@ -211,28 +200,28 @@ export default function AboutPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   {[
                     {
-                      title: "Build to Ship",
-                      description: "I believe in launching fast, learning faster. Every line of code should move toward a deployable product.",
+                      title: "Build End-to-End",
+                      description: "From frontend to AI agents to deployment — I own the full stack and ship complete products.",
                       icon: "rocket",
                     },
                     {
-                      title: "Data as a Compass",
-                      description: "Decisions backed by data, intuitions validated by metrics. Let the numbers guide the path.",
-                      icon: "chart",
+                      title: "AI-First Approach",
+                      description: "Every system I build leverages AI to automate, optimize, and make intelligent decisions.",
+                      icon: "cpu",
                     },
                     {
-                      title: "User Obsession",
-                      description: "Products exist for people. Every feature should answer a real user need, not just a technical curiosity.",
+                      title: "Impact at Scale",
+                      description: "From CampusBuzz to SaaS platforms — building products that serve hundreds of users.",
                       icon: "users",
                     },
                     {
                       title: "Continuous Learning",
-                      description: "From LLM fine-tuning to product strategy at IIM-B, I'm always a student first.",
+                      description: "From IIT KGP to ISRO to NagentAI — always pushing boundaries across AI, ML, and engineering.",
                       icon: "book",
                     },
                   ].map((value) => (
                     <div key={value.title} className="flex gap-3 sm:gap-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[var(--accent-purple)] to-[var(--accent-pink)] flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[var(--accent-red)] to-[var(--accent-orange)] flex items-center justify-center flex-shrink-0">
                         <Icon name={value.icon} size={20} className="text-white sm:hidden" />
                         <Icon name={value.icon} size={24} className="text-white hidden sm:block" />
                       </div>
@@ -250,41 +239,41 @@ export default function AboutPage() {
               </GlassCard>
 
               {/* Current Focus */}
-              <GlassCard className="p-4 sm:p-6 md:p-8 border-[var(--accent-purple)]/30">
+              <GlassCard className="p-4 sm:p-6 md:p-8 border-[var(--accent-red)]/30">
                 <h3 className="text-xl sm:text-2xl font-bold text-[var(--text-primary)] mb-4 sm:mb-6">
                   Currently Working On
                 </h3>
                 <div className="space-y-3 sm:space-y-4">
                   {[
                     {
-                      title: "WaveTech Founders Lab",
-                      role: "Co-Founder & Product Architect",
-                      description: "Building AI automation tools for SMBs",
-                      period: "Present",
+                      title: "Xenspire Group",
+                      role: "Software Engineer (AI Developer)",
+                      description: "Building end-to-end SaaS platform with email automation, AI agents, and candidate sourcing",
+                      period: "Aug 2025 – Present",
                     },
                     {
-                      title: "IIM Bangalore",
-                      role: "Executive Program in Product Management",
-                      description: "Sharpening product strategy & GTM skills",
-                      period: "Present",
+                      title: "CampusBuzz",
+                      role: "Founder & Chief Developer",
+                      description: "Campus networking platform — 550+ downloads, Top 100 startup",
+                      period: "Aug 2024 – Present",
                     },
                     {
-                      title: "IIT Patna",
-                      role: "BBA (Data Science & AI)",
-                      description: "Dual specialization in business & technology",
-                      period: "2023-2026",
+                      title: "IIT Kharagpur",
+                      role: "M.Tech (Earth System Science & Tech)",
+                      description: "Department Topper — CGPA 8.84, Best Performance in Technology Award",
+                      period: "2023 – 2025",
                     },
                   ].map((item) => (
                     <div
                       key={item.title}
-                      className="p-4 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--glass-border)]"
+                      className="p-4 rounded-xl bg-black/40 backdrop-blur-md border border-[var(--glass-border)]"
                     >
                       <div className="flex items-start justify-between">
                         <div>
                           <h4 className="font-semibold text-[var(--text-primary)]">
                             {item.title}
                           </h4>
-                          <p className="text-sm text-[var(--accent-purple)]">
+                          <p className="text-sm text-[var(--accent-red)]">
                             {item.role}
                           </p>
                         </div>
@@ -313,14 +302,7 @@ export default function AboutPage() {
               href="/"
               className="inline-flex items-center gap-2 text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors"
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-                focusable="false"
-              >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
               Back to Home
@@ -333,4 +315,10 @@ export default function AboutPage() {
     </div>
   );
 }
+
+
+
+
+
+
 

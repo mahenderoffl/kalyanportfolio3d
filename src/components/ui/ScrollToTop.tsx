@@ -24,7 +24,7 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 z-50 p-3 rounded-full bg-[var(--glass-bg)] backdrop-blur-md border border-[var(--glass-border)] text-[var(--text-primary)] shadow-lg hover:border-[var(--accent-purple)]/50 transition-all duration-200 hover:scale-110 active:scale-95 ${
+      className={`fixed bottom-8 right-8 z-50 p-3 rounded-full bg-[var(--glass-bg)] backdrop-blur-md border border-[var(--glass-border)] text-[var(--text-primary)] shadow-lg hover:border-[var(--accent-red)]/50 transition-all duration-200 hover:scale-110 active:scale-95 ${
         isVisible
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-4 pointer-events-none"
@@ -47,3 +47,5 @@ export default function ScrollToTop() {
     </button>
   );
 }
+
+

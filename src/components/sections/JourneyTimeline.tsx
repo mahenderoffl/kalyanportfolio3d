@@ -30,7 +30,7 @@ export default function JourneyTimeline() {
           transition={{ duration: 0.6 }}
           className="text-center mb-6 sm:mb-8"
         >
-          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs sm:text-sm font-medium text-[var(--accent-cyan)] bg-[var(--accent-cyan)]/10 rounded-full border border-[var(--accent-cyan)]/20">
+          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs sm:text-sm font-medium text-[var(--accent-orange)] bg-[var(--accent-orange)]/10 rounded-full border border-[var(--accent-orange)]/20">
             Timeline
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-display font-accent font-bold mb-3 sm:mb-4">
@@ -56,7 +56,7 @@ export default function JourneyTimeline() {
                 onClick={() => setSelectedType(type.id)}
                 className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg sm:rounded-xl transition-all whitespace-nowrap ${
                   selectedType === type.id
-                    ? "bg-[var(--accent-cyan)] text-white"
+                    ? "bg-[var(--accent-orange)] text-white"
                     : "bg-[var(--glass-bg)] text-[var(--text-tertiary)] hover:text-[var(--text-primary)] border border-[var(--glass-border)]"
                 }`}
               >
@@ -72,7 +72,7 @@ export default function JourneyTimeline() {
       <div className="container-max px-4 sm:px-6">
         <div className="relative">
           {/* Central Line */}
-          <div className="absolute left-3 sm:left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[var(--accent-purple)] via-[var(--accent-pink)] to-[var(--accent-cyan)] md:-translate-x-1/2" />
+          <div className="absolute left-3 sm:left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[var(--accent-red)] via-[var(--accent-orange)] to-[var(--accent-orange)] md:-translate-x-1/2" />
 
           {/* Events */}
           <div className="space-y-6 sm:space-y-8 md:space-y-12">
@@ -91,8 +91,8 @@ export default function JourneyTimeline() {
 
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-        <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-[var(--accent-cyan)]/5 rounded-full blur-[150px]" />
-        <div className="absolute bottom-1/3 right-0 w-[500px] h-[500px] bg-[var(--accent-purple)]/5 rounded-full blur-[150px]" />
+        <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-[var(--accent-orange)]/5 rounded-full blur-[150px]" />
+        <div className="absolute bottom-1/3 right-0 w-[500px] h-[500px] bg-[var(--accent-red)]/5 rounded-full blur-[150px]" />
       </div>
     </section>
   );
@@ -207,7 +207,7 @@ function TimelineCard({ event, index, isInView, isLeft }: TimelineCardProps) {
               {event.highlights.map((highlight, i) => (
                 <span
                   key={i}
-                  className="px-1.5 sm:px-2 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium bg-[var(--bg-tertiary)] rounded-md sm:rounded-lg text-[var(--text-muted)]"
+                  className="px-1.5 sm:px-2 py-0.5 sm:py-1 text-[10px] sm:text-xs font-medium bg-black/40 backdrop-blur-md rounded-md sm:rounded-lg text-[var(--text-muted)]"
                 >
                   {highlight}
                 </span>
@@ -225,3 +225,10 @@ function TimelineCard({ event, index, isInView, isLeft }: TimelineCardProps) {
     </motion.div>
   );
 }
+
+
+
+
+
+
+

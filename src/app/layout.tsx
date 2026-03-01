@@ -2,21 +2,18 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-// Primary font - Clean and professional
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
 
-// Accent font - Tech-forward and distinctive
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
   display: "swap",
 });
 
-// Code font - Technical sections
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
@@ -24,9 +21,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mahender Banoth | AI Systems Architect & Founder @ WaveSeed",
+  metadataBase: new URL("https://bodakalyan.campusbuzz.in"),
+  title: "Boda Kalyan Singh | AI Developer & Full-Stack Engineer",
   description:
-    "Founder @ WaveSeed Co. Building AI-powered automation systems. Full-Stack Developer, Data Scientist, and BBA student at IIT Patna. 2+ Startups Founded, 10+ Products Shipped.",
+    "Software Engineer (AI Developer) @ Xenspire Group. MTech from IIT Kharagpur (Dept Topper). Founder of CampusBuzz. 50+ AI Agents Built. Full-Stack Developer specializing in React, FastAPI, LangChain, and Generative AI.",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -35,55 +33,47 @@ export const metadata: Metadata = {
     shortcut: "/favicon.svg",
   },
   keywords: [
-    "Mahender Banoth",
-    "WaveSeed",
-    "WaveSeed Co",
+    "Boda Kalyan Singh",
     "AI Developer",
+    "Software Engineer",
     "Full Stack Developer",
-    "AI Systems",
-    "Automation",
+    "IIT Kharagpur",
+    "Xenspire Group",
+    "CampusBuzz",
     "LangChain",
-    "Next.js",
     "React",
+    "FastAPI",
     "Python",
     "Machine Learning",
-    "IIT Patna",
-    "Startup Founder",
-    "Tech Entrepreneur",
-    "Product Architect",
+    "Generative AI",
+    "AI Agents",
+    "RAG Pipelines",
   ],
-  authors: [{ name: "Mahender Banoth", url: "https://waveseed.app" }],
-  creator: "Mahender Banoth",
-  publisher: "WaveSeed Co",
-  metadataBase: new URL("https://waveseed.app"),
-  alternates: {
-    canonical: "https://waveseed.app",
-  },
+  authors: [{ name: "Boda Kalyan Singh" }],
+  creator: "Boda Kalyan Singh",
+  publisher: "Boda Kalyan Singh",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://waveseed.app",
-    siteName: "Mahender Banoth - WaveSeed",
-    title: "Mahender Banoth | AI Systems Architect & Founder @ WaveSeed",
+    siteName: "Boda Kalyan Singh - Portfolio",
+    title: "Boda Kalyan Singh | AI Developer & Full-Stack Engineer",
     description:
-      "Founder @ WaveSeed Co. Building AI-powered automation systems. Full-Stack Developer, Data Scientist, and BBA student at IIT Patna.",
+      "Software Engineer (AI Developer) @ Xenspire Group. MTech from IIT Kharagpur (Dept Topper). 50+ AI Agents Built.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/kalyan-profile.png",
         width: 1200,
         height: 630,
-        alt: "Mahender Banoth - AI Systems Architect & Founder @ WaveSeed",
+        alt: "Boda Kalyan Singh - AI Developer & Full-Stack Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mahender Banoth | AI Systems Architect & Founder @ WaveSeed",
+    title: "Boda Kalyan Singh | AI Developer & Full-Stack Engineer",
     description:
-      "Founder @ WaveSeed Co. Building AI-powered automation systems.",
-    images: ["/og-image.png"],
-    site: "@waveseedco",
-    creator: "@waveseedco",
+      "Software Engineer (AI Developer) @ Xenspire Group. MTech from IIT Kharagpur.",
+    images: ["/kalyan-profile.png"],
   },
   robots: {
     index: true,
@@ -95,9 +85,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "verification_token",
   },
 };
 
@@ -115,18 +102,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        {/* Advanced SEO & Analytics Integrations */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BODAKALYAN"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BODAKALYAN', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} font-primary antialiased`}
         style={{ fontFamily: "var(--font-inter)" }}
         suppressHydrationWarning
       >
-        {/* Background effects container */}
         <div className="fixed inset-0 -z-10 overflow-hidden">
-          {/* Base gradient */}
           <div className="absolute inset-0 bg-[var(--bg-primary)]" />
         </div>
-
-        {/* Main content */}
         <main className="relative">{children}</main>
       </body>
     </html>

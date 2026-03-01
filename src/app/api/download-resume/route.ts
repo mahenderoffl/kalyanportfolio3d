@@ -1,76 +1,83 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  // In production, this would generate or serve a PDF resume
-  // For now, redirect to a resume file or generate one
-  
+  // Redirect to the actual PDF resume
   const resumeContent = `
-MAHENDER BANOTH
-Tech Entrepreneur | Product Architect | Data Scientist
+BODA KALYAN SINGH
+Software Engineer (AI Developer) | Full-Stack Developer | IIT Kharagpur
 ================================================================================
 
 CONTACT
 -------
-Email: mahenderbanoth@gmail.com
-LinkedIn: linkedin.com/in/mahenderbanoth
-GitHub: github.com/mahender-banoth
-Location: Hyderabad, India
+Email: bodakalyansingh@gmail.com
+LinkedIn: linkedin.com/in/bodakalyansingh
+Phone: +91 9885358212
+Location: India
 
 SUMMARY
 -------
-Tech entrepreneur and product architect with expertise in building AI-powered 
-products, data analytics solutions, and scalable business automation systems. 
-Currently pursuing Executive Program in Product Management at IIM Bangalore while 
-leading WaveTech Founders Lab.
+Software Engineer (AI Developer) at Xenspire Group, building end-to-end SaaS 
+platforms with AI-powered automation. MTech from IIT Kharagpur (Dept Topper, 
+CGPA 8.84). Founder of CampusBuzz (550+ downloads, Top 100 Startup). Built 
+50+ AI agents. Full-stack expertise in React, FastAPI, LangChain, and GenAI.
 
 EDUCATION
 ---------
-Indian Institure of Technology Patna | Bachelor of Business Administration | 2023 - 2026
-TSMS Jr College |Intermediate Education | 2021 -2023
-Balaji Techno School Narsampet | Secondary Education | 2019 - 2021
+IIT Kharagpur | M.Tech (Earth System Science & Tech) | 2023 - 2025 | CGPA: 8.84
+JNTUH College of Engineering Manthani | B.Tech (Civil) | 2018 - 2022 | CGPA: 6.44
+Sri Chaitanya Junior College | TSBIE | 2018 | 97.4%
 
 EXPERIENCE
 ----------
-WaveTech Founders Lab | Co-Founder & Product Architect | Dec 2024 - Present
-- Built WaveSeed Growth platform with 500+ daily active users
-- Developed WaveBase AI assistant for business automation
-- Created WaveSignals for Nifty 50 market alerts
+Xenspire Group | Software Engineer (AI Developer) | Aug 2025 - Present
+- Building complete SaaS platform (solo dev): email automation, SMS, campaigns
+- Job posting extraction (Brightdata), contact sourcing (Apollo, ByteMine)
+- LinkedIn candidate search, AI agents. Stack: React + FastAPI
 
-GUVI - HCL Group Company | Data Analyst | Mar 2023 - Jul 2024
-- Built interactive Power BI dashboards for business intelligence
-- Automated reporting systems reducing manual work by 60%
+JUTEQ | Full Stack AI Developer | Jun 2025 - Jul 2025
+- Automotive agents, ReAct-style agents, Agentic RAG pipelines
+- LangChain, CrewAI, Node.js, NestJS, React
 
-PROJECTS
+NagentAI | Full-Stack GenAI Trainee | Feb 2025 - May 2025
+- Developed 50+ AI agents (GPT-4, Claude 3, Llama3, Gemini, Mistral)
+- Advanced RAG pipelines, multimodal AI, n8n automation
+
+ISRO NRSC | AI Research Intern | May 2024 - Jul 2024
+- CNN model (84.5% accuracy), satellite data, water quality prediction
+
+STARTUPS
 --------
-- CampusBuzz: Co-founded student community platform (500+ users)
-- AI Model Fine-tuning: Llama-2, Mistral, Phi for domain applications
-- Student Score Prediction: ML model with 94% accuracy
-- Global Sales Dashboard: Real-time analytics for 50+ countries
-- ATS Resume Analyzer: NLP-powered resume optimization tool
+CampusBuzz | Founder | Aug 2024
+- 550+ downloads, 250+ signups, Top 100 startups (Inflection Point Ventures)
+- Led 30+ interns, recognized by E-Cell IIT KGP
+
+Olive Orange | Co-Founder | Dec 2024
+- AI-powered EdTech platform with adaptive assessments
 
 SKILLS
 ------
-Languages: Python, JavaScript, TypeScript, SQL, R
-Frameworks: Next.js, React, Node.js, FastAPI, Django
-AI/ML: TensorFlow, PyTorch, Scikit-learn, LangChain, OpenAI
-Data: Pandas, NumPy, Power BI, Tableau, Excel
-Cloud: AWS, GCP, Azure, Vercel, Netlify
-Databases: PostgreSQL, MongoDB, Redis, Firebase
+Languages: Python, JavaScript, TypeScript, SQL
+Frontend: React, Next.js, HTML5, CSS3
+Backend: FastAPI, Django, Flask, NestJS, Node.js
+AI/ML: LangChain, LlamaIndex, CrewAI, AutoGen, TensorFlow, PyTorch
+LLMs: GPT-4, Claude 3, Gemini, Llama3, Mistral
+Databases: PostgreSQL, Redis, ChromaDB, FAISS, Pinecone, MongoDB
+Cloud: GCP, AWS, Azure, Docker, Kubernetes
+Automation: n8n, MCP, LangGraph
 
-CERTIFICATIONS
---------------
-- IBM Data Science Professional Certificate
-- Google Analytics Certified
-- AWS Cloud Practitioner
+AWARDS
+------
+- Best Performance in Technology Award (2024-25), IIT Kharagpur
+- Department Topper (CGPA 8.84)
+- Gold Medal - JNTU B-Zone Football Tournament
 
 ================================================================================
-References available upon request
 `;
 
   return new NextResponse(resumeContent, {
     headers: {
       'Content-Type': 'text/plain',
-      'Content-Disposition': 'attachment; filename="Mahender_Banoth_Resume.txt"',
+      'Content-Disposition': 'attachment; filename="Boda_Kalyan_Singh_Resume.txt"',
     },
   });
 }

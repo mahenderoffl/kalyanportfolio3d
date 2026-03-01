@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Footer() {
-  // Use static year to avoid hydration mismatch
   const currentYear = 2026;
 
   const footerLinks = {
@@ -17,14 +16,12 @@ export default function Footer() {
       { name: "Contact", href: "#contact" },
     ],
     products: [
-      { name: "WaveSeed Co.", href: "https://waveseed.app" },
-      { name: "WaveBase", href: "https://wavebase.waveseed.app" },
-      { name: "WaveSeed Growth", href: "https://agency.waveseed.app" },
+      { name: "CampusBuzz", href: "#" },
+      { name: "Olive Orange", href: "#" },
     ],
     social: [
-      { name: "LinkedIn", href: "https://linkedin.com/in/mahendercreates" },
-      { name: "GitHub", href: "https://github.com/mahenderoffl" },
-      { name: "Instagram", href: "https://instagram.com/waveseedco" },
+      { name: "LinkedIn", href: "https://linkedin.com/in/bodakalyansingh" },
+      { name: "GitHub", href: "https://github.com/bodakalyansingh" },
     ],
   };
 
@@ -42,12 +39,12 @@ export default function Footer() {
           >
             <Link href="/" className="inline-block mb-3 sm:mb-4">
               <span className="text-xl sm:text-2xl font-accent font-bold gradient-text">
-                Mahender Banoth
+                Kalyan Singh
               </span>
             </Link>
             <p className="text-xs sm:text-sm text-[var(--text-tertiary)] max-w-xs">
-              Building the future, one product at a time. Tech entrepreneur,
-              product architect, and lifelong learner.
+              Building the future with AI-powered solutions. Software Engineer,
+              AI Developer, and lifelong learner from IIT Kharagpur.
             </p>
           </motion.div>
 
@@ -83,7 +80,7 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.15 }}
           >
             <h4 className="text-xs sm:text-sm font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-3 sm:mb-4">
-              Products
+              Startups
             </h4>
             <ul className="space-y-1.5 sm:space-y-2">
               {footerLinks.products.map((link) => (
@@ -92,21 +89,11 @@ export default function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs sm:text-sm text-[var(--accent-purple)] hover:text-[var(--text-primary)] transition-colors inline-flex items-center gap-1.5"
+                    className="text-xs sm:text-sm text-[var(--accent-red)] hover:text-[var(--text-primary)] transition-colors inline-flex items-center gap-1.5"
                   >
                     {link.name}
-                    <svg
-                      className="w-2.5 h-2.5 sm:w-3 sm:h-3"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
+                    <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
                 </li>
@@ -134,18 +121,8 @@ export default function Footer() {
                     className="text-xs sm:text-sm text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors inline-flex items-center gap-1.5 sm:gap-2"
                   >
                     {link.name}
-                    <svg
-                      className="w-2.5 h-2.5 sm:w-3 sm:h-3"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
+                    <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
                 </li>
@@ -153,10 +130,10 @@ export default function Footer() {
             </ul>
             <div className="mt-3 sm:mt-4">
               <a
-                href="mailto:mahender@waveseed.app"
-                className="text-xs sm:text-sm text-[var(--accent-purple)] hover:text-[var(--accent-pink)] transition-colors break-all"
+                href="mailto:bodakalyansingh@gmail.com"
+                className="text-xs sm:text-sm text-[var(--accent-red)] hover:text-[var(--accent-orange)] transition-colors break-all"
               >
-                mahender@waveseed.app
+                bodakalyansingh@gmail.com
               </a>
             </div>
           </motion.div>
@@ -171,18 +148,23 @@ export default function Footer() {
           className="pt-6 sm:pt-8 border-t border-[var(--glass-border)] flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4"
         >
           <p className="text-[10px] sm:text-xs md:text-sm text-[var(--text-muted)] text-center sm:text-left">
-            © {currentYear} Mahender Banoth. All rights reserved.
+            © {currentYear} Boda Kalyan Singh. All rights reserved.
           </p>
           <p className="text-[10px] sm:text-xs md:text-sm text-[var(--text-muted)] text-center sm:text-right">
             Built with{" "}
-            <span className="text-[var(--accent-pink)] inline-flex items-center">passion</span> using Next.js,
+            <span className="text-[var(--accent-orange)] inline-flex items-center">passion</span> using Next.js,
             Tailwind CSS & Framer Motion
           </p>
         </motion.div>
       </div>
 
-      {/* Gradient Accent */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--accent-purple)] to-transparent opacity-50" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--accent-red)] to-transparent opacity-50" />
     </footer>
   );
 }
+
+
+
+
+
+

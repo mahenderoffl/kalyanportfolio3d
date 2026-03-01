@@ -31,7 +31,7 @@ export default function ProjectsGalaxy() {
           transition={{ duration: 0.6 }}
           className="text-center mb-6 sm:mb-8"
         >
-          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs sm:text-sm font-medium text-[var(--accent-pink)] bg-[var(--accent-pink)]/10 rounded-full border border-[var(--accent-pink)]/20">
+          <span className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 text-xs sm:text-sm font-medium text-[var(--accent-orange)] bg-[var(--accent-orange)]/10 rounded-full border border-[var(--accent-orange)]/20">
             Portfolio
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-display font-accent font-bold mb-3 sm:mb-4">
@@ -58,7 +58,7 @@ export default function ProjectsGalaxy() {
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg sm:rounded-xl transition-all whitespace-nowrap ${
                   selectedCategory === cat.id
-                    ? "bg-[var(--accent-purple)] text-white"
+                    ? "bg-[var(--accent-red)] text-white"
                     : "bg-[var(--glass-bg)] text-[var(--text-tertiary)] hover:text-[var(--text-primary)] border border-[var(--glass-border)]"
                 }`}
               >
@@ -93,8 +93,8 @@ export default function ProjectsGalaxy() {
 
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[var(--accent-pink)]/5 rounded-full blur-[150px]" />
-        <div className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-[var(--accent-purple)]/5 rounded-full blur-[150px]" />
+        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[var(--accent-orange)]/5 rounded-full blur-[150px]" />
+        <div className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-[var(--accent-red)]/5 rounded-full blur-[150px]" />
       </div>
     </section>
   );
@@ -132,7 +132,7 @@ function ProjectCard({
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2 flex-wrap">
               {project.isUpcoming && (
-                <span className="px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-full animate-pulse">
+                <span className="px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-semibold bg-gradient-to-r from-emerald-500 to-orange-500 text-white rounded-full animate-pulse">
                   🚀 UPCOMING
                 </span>
               )}
@@ -202,7 +202,7 @@ function ProjectCard({
           {project.stats.map((stat, i) => (
             <div
               key={i}
-              className="text-center p-1.5 sm:p-2 rounded-lg bg-[var(--bg-tertiary)]/50"
+              className="text-center p-1.5 sm:p-2 rounded-lg bg-black/40 backdrop-blur-md/50"
             >
               <div className="flex justify-center mb-0.5">
                 <Icon name={stat.icon} size={16} className="text-[var(--text-secondary)]" />
@@ -313,3 +313,10 @@ function ProjectCard({
     </motion.div>
   );
 }
+
+
+
+
+
+
+

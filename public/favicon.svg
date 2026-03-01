@@ -25,5 +25,5 @@
   <rect x="8" y="8" width="84" height="84" rx="17" ry="17" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
   
   <!-- MB Text -->
-  <text x="50" y="68" font-family="Arial, sans-serif" font-size="42" font-weight="bold" text-anchor="middle" fill="url(#textGradient)" filter="url(#glow)">MB</text>
+  <text x="50" y="68" font-family="Arial, sans-serif" font-size="42" font-weight="bold" text-anchor="middle" fill="url(#textGradient)" filter="url(#glow)">BK</text>
 </svg>

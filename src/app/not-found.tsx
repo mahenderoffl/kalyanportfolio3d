@@ -62,7 +62,7 @@ export default function NotFound() {
           {[...Array(5)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 rounded-full bg-[var(--accent-purple)]"
+              className="absolute w-2 h-2 rounded-full bg-[var(--accent-red)]"
               style={{
                 left: `${20 + i * 15}%`,
                 top: `${30 + (i % 3) * 20}%`,
@@ -83,3 +83,5 @@ export default function NotFound() {
     </div>
   );
 }
+
+

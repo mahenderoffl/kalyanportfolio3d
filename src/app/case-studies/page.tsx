@@ -25,7 +25,7 @@ const caseStudies = [
       { metric: "Beta", label: "Status" },
     ],
     technologies: ["React Native", "Node.js", "PostgreSQL", "Redis", "GPT-4", "Expo"],
-    gradient: "from-emerald-500 to-teal-500",
+    gradient: "from-emerald-500 to-orange-500",
     image: "/projects/wavetrack.png",
     isUpcoming: true,
   },
@@ -46,7 +46,7 @@ const caseStudies = [
       { metric: "60%", label: "Time Saved" },
     ],
     technologies: ["Next.js", "Python", "LangChain", "OpenAI", "PostgreSQL", "Redis"],
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-red-500 to-orange-500",
     image: "/projects/waveseed.png",
   },
   {
@@ -66,7 +66,7 @@ const caseStudies = [
       { metric: "4.8", label: "User Rating" },
     ],
     technologies: ["React Native", "Node.js", "MongoDB", "Firebase", "Socket.io"],
-    gradient: "from-cyan-500 to-blue-500",
+    gradient: "from-orange-500 to-red-500",
     image: "/projects/campusbuzz.png",
   },
   {
@@ -131,7 +131,7 @@ export default function CaseStudiesPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-[var(--accent-purple)] bg-[var(--accent-purple)]/10 rounded-full border border-[var(--accent-purple)]/20">
+            <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-[var(--accent-red)] bg-[var(--accent-red)]/10 rounded-full border border-[var(--accent-red)]/20">
               Case Studies
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
@@ -152,7 +152,7 @@ export default function CaseStudiesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <GlassCard className={`p-6 sm:p-8 overflow-hidden ${study.isUpcoming ? 'border-[var(--accent-cyan)]/30' : ''}`}>
+                <GlassCard className={`p-6 sm:p-8 overflow-hidden ${study.isUpcoming ? 'border-[var(--accent-orange)]/30' : ''}`}>
                   <div className="grid lg:grid-cols-2 gap-8">
                     {/* Content */}
                     <div>
@@ -163,7 +163,7 @@ export default function CaseStudiesPage() {
                           {study.subtitle}
                         </div>
                         {study.isUpcoming && (
-                          <span className="px-2 py-1 rounded-full text-xs font-medium bg-[var(--accent-cyan)]/20 text-[var(--accent-cyan)] border border-[var(--accent-cyan)]/30 animate-pulse">
+                          <span className="px-2 py-1 rounded-full text-xs font-medium bg-[var(--accent-orange)]/20 text-[var(--accent-orange)] border border-[var(--accent-orange)]/30 animate-pulse">
                             🚀 Coming Soon
                           </span>
                         )}
@@ -178,7 +178,7 @@ export default function CaseStudiesPage() {
                       {/* Challenge & Solution */}
                       <div className="space-y-4 mb-6">
                         <div>
-                          <h3 className="text-sm font-semibold text-[var(--accent-pink)] mb-2 flex items-center gap-2">
+                          <h3 className="text-sm font-semibold text-[var(--accent-orange)] mb-2 flex items-center gap-2">
                             <Icon name="target" size={16} />
                             The Challenge
                           </h3>
@@ -202,7 +202,7 @@ export default function CaseStudiesPage() {
                         {study.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className="px-3 py-1 text-xs rounded-full bg-[var(--bg-tertiary)] text-[var(--text-secondary)] border border-[var(--glass-border)]"
+                            className="px-3 py-1 text-xs rounded-full bg-black/40 backdrop-blur-md text-[var(--text-secondary)] border border-[var(--glass-border)]"
                           >
                             {tech}
                           </span>
@@ -219,7 +219,7 @@ export default function CaseStudiesPage() {
                         {study.results.map((result) => (
                           <div
                             key={result.label}
-                            className="p-4 rounded-xl bg-[var(--bg-tertiary)] border border-[var(--glass-border)]"
+                            className="p-4 rounded-xl bg-black/40 backdrop-blur-md border border-[var(--glass-border)]"
                           >
                             <div
                               className={`text-2xl sm:text-3xl font-bold mb-1 bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent`}
@@ -256,13 +256,13 @@ export default function CaseStudiesPage() {
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link
                   href="/book-a-call"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-pink)] shadow-lg shadow-[var(--accent-purple)]/25 hover:shadow-[var(--accent-purple)]/40 transition-shadow"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-[var(--accent-red)] to-[var(--accent-orange)] shadow-lg shadow-[var(--accent-red)]/25 hover:shadow-[var(--accent-red)]/40 transition-shadow"
                 >
                   Book a Call
                 </Link>
                 <Link
                   href="/#contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-[var(--text-primary)] border border-[var(--glass-border)] bg-[var(--glass-bg)] hover:bg-[var(--bg-tertiary)] transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-[var(--text-primary)] border border-[var(--glass-border)] bg-[var(--glass-bg)] hover:bg-black/40 backdrop-blur-md transition-colors"
                 >
                   Get in Touch
                 </Link>
@@ -274,3 +274,11 @@ export default function CaseStudiesPage() {
     </main>
   );
 }
+
+
+
+
+
+
+
+

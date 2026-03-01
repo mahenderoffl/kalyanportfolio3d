@@ -182,7 +182,7 @@ export default function CustomCursor() {
         style={{ willChange: "transform" }}
       >
         <div
-          className="rounded-full bg-purple-500"
+          className="rounded-full bg-red-500"
           style={{
             width: 6,
             height: 6,
@@ -203,3 +203,5 @@ export default function CustomCursor() {
     </>
   );
 }
+
+
