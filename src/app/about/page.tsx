@@ -76,7 +76,7 @@ export default function AboutPage() {
                     Software Engineer @ Xenspire Group
                   </p>
                   <p className="text-sm text-[var(--text-muted)] mb-4">
-                    M.Tech @ IIT Kharagpur � Dept Topper
+                    M.Tech @ IIT Kharagpur - Dept Topper
                   </p>
                   <div className="flex items-center justify-center gap-2 text-sm">
                     <span className="w-2 h-2 rounded-full bg-[var(--accent-green)] animate-pulse" />
@@ -175,7 +175,7 @@ export default function AboutPage() {
                   <p>
                     During my M.Tech at IIT Kharagpur, I graduated as the department topper with
                     a CGPA of 8.84 and won the Best Performance in Technology Award. But academics
-                    were just the start � I founded CampusBuzz, a platform that reached 550+ users
+                    were just the start - I founded CampusBuzz, a platform that reached 550+ users
                     organically and was recognized among the Top 100 startups by Inflection Point Ventures.
                   </p>
                   <p>
@@ -185,7 +185,7 @@ export default function AboutPage() {
                   </p>
                   <p>
                     Today at Xenspire Group, I&apos;m building a complete SaaS platform as a solo
-                    developer � from email automation and campaign management to AI-powered candidate
+                    developer - from email automation and campaign management to AI-powered candidate
                     sourcing. I handle everything: React frontend, FastAPI backend, AI agents, and
                     third-party integrations like Brightdata, Apollo, and ByteMine.
                   </p>
@@ -201,7 +201,7 @@ export default function AboutPage() {
                   {[
                     {
                       title: "Build End-to-End",
-                      description: "From frontend to AI agents to deployment � I own the full stack and ship complete products.",
+                      description: "From frontend to AI agents to deployment - I own the full stack and ship complete products.",
                       icon: "rocket",
                     },
                     {
@@ -211,12 +211,12 @@ export default function AboutPage() {
                     },
                     {
                       title: "Impact at Scale",
-                      description: "From CampusBuzz to SaaS platforms � building products that serve hundreds of users.",
+                      description: "From CampusBuzz to SaaS platforms - building products that serve hundreds of users.",
                       icon: "users",
                     },
                     {
                       title: "Continuous Learning",
-                      description: "From IIT KGP to ISRO to NagentAI � always pushing boundaries across AI, ML, and engineering.",
+                      description: "From IIT KGP to ISRO to NagentAI - always pushing boundaries across AI, ML, and engineering.",
                       icon: "book",
                     },
                   ].map((value) => (
@@ -249,19 +249,19 @@ export default function AboutPage() {
                       title: "Xenspire Group",
                       role: "Software Engineer (AI Developer)",
                       description: "Building end-to-end SaaS platform with email automation, AI agents, and candidate sourcing",
-                      period: "Aug 2025 � Present",
+                      period: "Aug 2025 - Present",
                     },
                     {
                       title: "CampusBuzz",
                       role: "Founder & Chief Developer",
-                      description: "Campus networking platform � 550+ downloads, Top 100 startup",
-                      period: "Aug 2024 � Present",
+                      description: "Campus networking platform - 550+ downloads, Top 100 startup",
+                      period: "Aug 2024 - Present",
                     },
                     {
                       title: "IIT Kharagpur",
                       role: "M.Tech (Earth System Science & Tech)",
-                      description: "Department Topper � CGPA 8.84, Best Performance in Technology Award",
-                      period: "2023 � 2025",
+                      description: "Department Topper - CGPA 8.84, Best Performance in Technology Award",
+                      period: "2023 - 2025",
                     },
                   ].map((item) => (
                     <div
