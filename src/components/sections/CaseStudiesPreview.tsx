@@ -34,7 +34,7 @@ const caseStudies = [
     id: "campusbuzz-platform",
     title: "CampusBuzz: 5K+ Students",
     category: "Startup Story",
-    description: "Co-founding a campus platform that connected thousands of students at IIT Patna.",
+    description: "Co-founding a campus platform that connected thousands of students at IIT Kharagpur.",
     metrics: [
       { label: "Active Users", value: "5K+" },
       { label: "Engagement", value: "+40%" },

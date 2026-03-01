@@ -13,7 +13,7 @@ const blogPosts = [
     id: "all-about-me",
     title: "All About Boda Kalyan Singh: My Journey from IIT Kharagpur to Building AI Systems",
     excerpt:
-      "From being a student at the prestigious Indian Institute of Technology Patna to founding WaveSeed Co. — this is my story of building AI-powered solutions that matter.",
+      "From being a student at the prestigious Indian Institute of Technology Kharagpur to founding multiple AI-driven companies, journey has been nothing short of a rollercoaster ride...",
     date: "February 2026",
     readTime: "10 min read",
     category: "Personal Story",
@@ -21,10 +21,10 @@ const blogPosts = [
     image: "/kalyan-profile.png",
   },
   {
-    id: "life-at-iit-patna",
+    id: "life-at-iit-kharagpur",
     title: "Life at IIT Kharagpur: Campus, Culture, and Opportunities",
     excerpt:
-      "An inside look at life at the Indian Institute of Technology Patna — the academic excellence, vibrant campus culture, and incredible opportunities.",
+      "An inside look at life at the Indian Institute of Technology Kharagpur — the academic excellence, vibrant campus culture, and incredible opportunities.",
     date: "February 2026",
     readTime: "7 min read",
     category: "Campus Life",

@@ -1,4 +1,4 @@
-# MAHENDER BANOTH - 3D CINEMATIC PORTFOLIO
+# KALYAN BANOTH - 3D CINEMATIC PORTFOLIO
 ## Complete PRD v2.0 - Updated with Full Project Portfolio
 
 ---
@@ -119,7 +119,7 @@ Code: "JetBrains Mono" (Technical sections)
 ## 📁 FILE STRUCTURE
 
 ```
-mahender-3d-portfolio/
+kalyan-3d-portfolio/
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx

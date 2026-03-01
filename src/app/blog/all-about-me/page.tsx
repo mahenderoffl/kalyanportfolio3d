@@ -37,16 +37,16 @@ export default function AllAboutMePage() {
               </svg>
               Back to Blog
             </Link>
-            
+
             <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-[var(--accent-orange)] bg-[var(--accent-orange)]/10 rounded-full border border-[var(--accent-orange)]/20">
               Personal Story
             </span>
-            
+
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
               <span className="text-[var(--text-primary)]">All About</span>{" "}
               <span className="gradient-text">Boda Kalyan Singh</span>
             </h1>
-            
+
             <div className="flex items-center justify-center gap-4 text-sm text-[var(--text-muted)] mb-8">
               <span>February 2026</span>
               <span>•</span>
@@ -80,7 +80,7 @@ export default function AllAboutMePage() {
                   {/* IIT Kharagpur Logo */}
                   <div className="w-24 h-24 md:w-32 md:h-32 relative flex-shrink-0 bg-white rounded-2xl p-2 mx-auto md:mx-0">
                     <Image
-                      src="/bio3.jpg"
+                      src="/kgp.png"
                       alt="IIT Kharagpur Logo"
                       fill
                       className="object-contain p-2"
@@ -88,16 +88,16 @@ export default function AllAboutMePage() {
                   </div>
                   <div className="text-center md:text-left">
                     <h2 className="text-2xl md:text-3xl font-bold text-[var(--accent-orange)] mb-2">
-                      Graduate from Indian Institute of Technology Patna
+                      Graduate from Indian Institute of Technology Kharagpur
                     </h2>
                     <p className="text-lg text-[var(--text-tertiary)]">BBA (2023-2026) | CGPA: 8.18/10.0</p>
                     <p className="text-sm text-[var(--text-muted)] mt-2">Tata Foundation Scholar</p>
                   </div>
                 </div>
-                
+
                 <p className="text-lg text-[var(--text-secondary)] mb-8 leading-relaxed">
-                  My journey at <strong className="text-[var(--accent-orange)]">IIT Kharagpur</strong> has been nothing short of transformative. 
-                  Being at one of India&apos;s premier institutes of national importance, I&apos;ve had the privilege of learning from 
+                  My journey at <strong className="text-[var(--accent-orange)]">IIT Kharagpur</strong> has been nothing short of transformative.
+                  Being at one of India&apos;s premier institutes of national importance, I&apos;ve had the privilege of learning from
                   world-class faculty, collaborating with brilliant minds, and building solutions that matter.
                 </p>
 
@@ -138,11 +138,11 @@ export default function AllAboutMePage() {
                 <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-6">
                   My Journey: From Student to Founder
                 </h2>
-                
+
                 <div className="space-y-6">
                   <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
-                    I&apos;m <strong className="text-[var(--text-primary)]">Boda Kalyan Singh</strong>, a founder, full-stack AI architect, 
-                    and data scientist based in Hyderabad, India. My passion lies at the intersection of technology and business, 
+                    I&apos;m <strong className="text-[var(--text-primary)]">Boda Kalyan Singh</strong>, a founder, full-stack AI architect,
+                    and data scientist based in Hyderabad, India. My passion lies at the intersection of technology and business,
                     where I build AI-powered solutions that automate complexity away.
                   </p>
 
@@ -156,9 +156,9 @@ export default function AllAboutMePage() {
                   </div>
 
                   <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
-                    While pursuing my BBA at <strong className="text-[var(--accent-orange)]">IIT Kharagpur</strong>, I founded 
-                    <a href="https://waveseed.app" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-red)] hover:underline font-semibold"> WaveSeed Co.</a>, 
-                    a company focused on building intelligent automation tools. What started as a side project has evolved into 
+                    While pursuing my BBA at <strong className="text-[var(--accent-orange)]">IIT Kharagpur</strong>, I founded
+                    <a href="https://waveseed.app" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-red)] hover:underline font-semibold"> WaveSeed Co.</a>,
+                    a company focused on building intelligent automation tools. What started as a side project has evolved into
                     a suite of products that help businesses reduce manual work by 85%.
                   </p>
                 </div>
@@ -169,7 +169,7 @@ export default function AllAboutMePage() {
                 <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-6">
                   What I Build
                 </h2>
-                
+
                 {/* WaveSeed Logo and Growth */}
                 <div className="mb-6 p-6 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--accent-red)]/30">
                   <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -204,7 +204,7 @@ export default function AllAboutMePage() {
                 <div className="mb-6 p-6 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--accent-orange)]/30">
                   <h4 className="font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
                     <svg className="w-5 h-5 text-[var(--accent-orange)]" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                      <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
                     </svg>
                     WaveSeed Launch Video
                   </h4>
@@ -218,7 +218,7 @@ export default function AllAboutMePage() {
                     />
                   </div>
                 </div>
-                
+
                 <div className="grid gap-4">
                   <div className="p-5 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--accent-orange)]/30">
                     <div className="flex items-center gap-3 mb-3">
@@ -236,7 +236,7 @@ export default function AllAboutMePage() {
                       </a>
                     </p>
                   </div>
-                  
+
                   <div className="p-5 bg-black/40 backdrop-blur-md rounded-xl border border-[var(--accent-orange)]/30">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-2xl">📝</span>
@@ -252,7 +252,7 @@ export default function AllAboutMePage() {
                 <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-6">
                   Impact Numbers
                 </h2>
-                
+
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {[
                     { value: "2+", label: "Startups Founded" },
@@ -273,7 +273,7 @@ export default function AllAboutMePage() {
                 <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-6">
                   Glimpses of My Journey
                 </h2>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                   <div className="relative aspect-square rounded-xl overflow-hidden">
                     <Image
@@ -299,20 +299,20 @@ export default function AllAboutMePage() {
                 <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-6">
                   Let&apos;s Connect
                 </h2>
-                
+
                 <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
-                  I&apos;m always excited to connect with fellow builders, entrepreneurs, and anyone passionate about technology. 
+                  I&apos;m always excited to connect with fellow builders, entrepreneurs, and anyone passionate about technology.
                   Whether you want to collaborate, discuss ideas, or just say hi – my inbox is always open.
                 </p>
-                
+
                 <div className="flex flex-wrap gap-4">
-                  <a 
+                  <a
                     href="mailto:bodakalyansingh@gmail.com"
                     className="btn-primary px-6 py-3"
                   >
                     Get in Touch
                   </a>
-                  <a 
+                  <a
                     href="https://linkedin.com/in/bodakalyansingh"
                     target="_blank"
                     rel="noopener noreferrer"

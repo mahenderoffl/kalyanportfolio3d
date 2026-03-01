@@ -91,7 +91,7 @@ export default function FoundingWaveSeedPost() {
               <div className="mb-10">
                 <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
                   <svg className="w-5 h-5 text-[var(--accent-orange)]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
                   </svg>
                   WaveSeed Launch Video
                 </h3>
@@ -111,7 +111,7 @@ export default function FoundingWaveSeedPost() {
               </p>
 
               <h2 className="text-2xl font-bold text-[var(--text-primary)] mt-10 mb-4">The Problem I Saw</h2>
-              
+
               <p>
                 As a BBA student at IIT Kharagpur with hands-on experience building products for startups and SMBs, I&apos;ve seen both sides of the business technology divide. Fortune 500 companies have entire departments dedicated to automation, AI integration, and digital transformation. Small and medium businesses? They&apos;re often stuck with spreadsheets, manual processes, and expensive tools they don&apos;t know how to use effectively.
               </p>
@@ -132,7 +132,7 @@ export default function FoundingWaveSeedPost() {
 
               <div className="p-6 rounded-2xl bg-[var(--glass-bg)] border border-[var(--glass-border)] my-8">
                 <h3 className="text-lg font-bold text-[var(--text-primary)] mb-6">Our Core Products</h3>
-                
+
                 {/* WaveSeed Growth Logo */}
                 <div className="mb-6 p-4 rounded-xl bg-white/5 border border-[var(--accent-red)]/30">
                   <div className="relative w-full h-16 mb-4">
@@ -230,7 +230,7 @@ export default function FoundingWaveSeedPost() {
               </p>
 
               <p>
-                Building WaveSeed isn&apos;t just about creating a successful company. It&apos;s about proving that meaningful innovation can come from anywhere—from a student in Patna with a laptop and a vision, from late nights balancing coursework and code, from the conviction that technology should empower everyone, not just those who can afford expensive consultants.
+                Building WaveSeed isn&apos;t just about creating another tech product; it&apos;s about building a better future. The vision was born from a simple observation during my time running a startup that helped thousands of students at IIT Kharagpur. I noticed how much potential was wasted on repetitive tasks rather than creative problem solving. coursework and code, from the conviction that technology should empower everyone, not just those who can afford expensive consultants.
               </p>
 
               <h2 className="text-2xl font-bold text-[var(--text-primary)] mt-10 mb-4">Join the Journey</h2>

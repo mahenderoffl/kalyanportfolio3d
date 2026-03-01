@@ -1,6 +1,6 @@
-# Mahender Banoth - 3D Cinematic Portfolio 🚀
+# Kalyan Banoth - 3D Cinematic Portfolio 🚀
 
-A jaw-dropping, next-gen portfolio website built with cutting-edge web technologies. This portfolio showcases Mahender Banoth's journey as a Tech Entrepreneur, Product Architect, and Data Scientist.
+A jaw-dropping, next-gen portfolio website built with cutting-edge web technologies. This portfolio showcases Kalyan Banoth's journey as a Tech Entrepreneur, Product Architect, and Data Scientist.
 
 ## ✨ Features
 
@@ -63,7 +63,7 @@ npm run build
 
 ---
 
-Built with ♥ by Mahender Banoth
+Built with ♥ by Kalyan Banoth
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/mahenderbanoth)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/mahender-banoth)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/kalyanbanoth)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/kalyan-banoth)

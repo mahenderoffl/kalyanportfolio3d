@@ -30,7 +30,7 @@ const blogPosts = [
     accentColor: "var(--accent-red)",
   },
   {
-    id: "life-at-iit-patna",
+    id: "life-at-iit-kharagpur",
     title: "Life at IIT Kharagpur",
     excerpt: "Campus experiences, academics, and the journey of growth at one of India's premier institutes.",
     category: "Campus Life",

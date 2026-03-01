@@ -60,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/blog/life-at-iit-patna`,
+      url: `${baseUrl}/blog/life-at-iit-kharagpur`,
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
